@@ -14,10 +14,10 @@
   		<div class="col-sm-3 min-col">
   			<div class="quick-links side-item">
   				<ul>
-  					<li><a href="<?php echo get_permalink( get_post_meta( $post->ID, "quick-link-1-page", true )); ?>"><?php echo get_post_meta( $post->ID, "quick-link-1", true ); ?> ></a></li>
-  					<li><a href="<?php echo get_permalink( get_post_meta( $post->ID, "quick-link-2-page", true )); ?>"><?php echo get_post_meta( $post->ID, "quick-link-2", true ); ?> ></a></li>
-  					<li><a href="<?php echo get_permalink( get_post_meta( $post->ID, "quick-link-3-page", true )); ?>"><?php echo get_post_meta( $post->ID, "quick-link-3", true ); ?> ></a></li>
-  					<li><a href="<?php echo get_permalink( get_post_meta( $post->ID, "quick-link-4-page", true )); ?>"><?php echo get_post_meta( $post->ID, "quick-link-4", true ); ?> ></a></li>
+  					<li class="ql1"><a href="<?php echo get_permalink( get_post_meta( $post->ID, "quick-link-1-page", true )); ?>"><?php echo get_post_meta( $post->ID, "quick-link-1", true ); ?> ></a></li>
+  					<li class="ql2"><a href="<?php echo get_permalink( get_post_meta( $post->ID, "quick-link-2-page", true )); ?>"><?php echo get_post_meta( $post->ID, "quick-link-2", true ); ?> ></a></li>
+  					<li class="ql3"><a href="<?php echo get_permalink( get_post_meta( $post->ID, "quick-link-3-page", true )); ?>"><?php echo get_post_meta( $post->ID, "quick-link-3", true ); ?> ></a></li>
+  					<li class="ql4"><a href="<?php echo get_permalink( get_post_meta( $post->ID, "quick-link-4-page", true )); ?>"><?php echo get_post_meta( $post->ID, "quick-link-4", true ); ?> ></a></li>
   				</ul>
   			</div>
 
@@ -47,12 +47,13 @@
 			</div>
 
 			<div class="news main-item">
-				<h2>Latest news</h2>
+				<h2>Press releases</h2>
 <ul>
 						<?php
 					// Get meta value containing array of entries
 					$latest_news_args = array(
 						'post_type' => 'post',
+						'category' => 'press-release',
 						'posts_per_page' => 3
 					);
 					$latest_news_query = new WP_Query( $latest_news_args );
@@ -74,7 +75,7 @@
 											</div>
 										<?php endif; ?>
 								
-										<?php the_excerpt(); ?>
+										<!--<?php the_excerpt(); ?>-->
 
 							
 							</div>
@@ -86,13 +87,14 @@
 
 				</ul>
 				
-			<a href="/imb/news/" class= "float-right em-link">More news ></a>
+			<a href="/imb/news/" class= "float-right em-link">All press releases ></a>
 
 			</div>
+
 			<div class="media main-item video-container">
 				<h2>Latest media</h2>
 					<div class="videoWrapper">
-					 	<iframe width="640" height="360" src="//www.youtube.com/embed/VZla8-O_qH8" frameborder="0" allowfullscreen></iframe> 
+					 	<iframe width="640" height="360" src="//www.youtube.com/embed/eUJHfEb9v88" frameborder="0" allowfullscreen></iframe> 
 					 </div>
 			</div>
 

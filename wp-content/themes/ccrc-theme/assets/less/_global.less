@@ -37,13 +37,18 @@ figure {
 
 .main-item {
 	display: inline-block;
+	border-top: 1px solid @thin-divider-clr;
 	border-bottom: 1px solid @thin-divider-clr;
 	padding-bottom: 1em;
+
+		@media (min-width: @screen-sm) {
+			border-top: 0;
+		}
 }
 
 .side-item {
 	display: block;
-	border-bottom: 5px solid @brand-secondary;
+	border-bottom: 5px solid @brand-primary;
 	padding-bottom: 1em;
 
 		&:last-child {
@@ -62,7 +67,7 @@ figure {
 	}
 
 .widget {
-	border-bottom: 5px solid @brand-secondary;
+	border-bottom: 5px solid @brand-primary;
 	padding-bottom: 1em;
 }
 

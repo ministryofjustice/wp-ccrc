@@ -8,12 +8,12 @@
 /* - - - - - - Logo - - - - - - */
 
  #branding {
- 	margin:1em 0 0 0;
+ 	margin:2em 0 1em 0;
  	display: inline-block;
  	width: 33%;
 
 	 	img {
-	 		max-width: 200px;
+	 		// max-width: 200px;
 	 	}
 
 
@@ -72,8 +72,7 @@
 
 
  		@media only screen and (min-width:768px) {
- 			width: 14.285714286%;
-      max-width: calc(100% / 7);
+      width: auto;
  			margin-bottom: 0;
 
  			   	&:nth-child(odd) {
@@ -85,51 +84,53 @@
    	}
 
  .navbar-default .navbar-nav li a, .navbar-default .navbar-nav > .open > a {
- 	color: @navbar-default-link-color; 
+ 	color: @light-text-clr; 
  	display: block;
  	font-weight: 500;
   font-size: .9em;
-  padding: .55em;
- 	background-color: @navbar-default-link-bg;
+  padding: .55em .77em;
+ 	background-color: @brand-primary;
 
  		&:hover { 
- 			background-color: lighten(@brand-primary, 6%); 
+ 			background-color: @brand-secondary; 
  		}
 
  		@media only screen and (min-width:768px) {
 
- 			background: @navbar-default-link-bg url("../img/nav-divider.gif") no-repeat 100% 50%;
+ 			background: @brand-primary url("../img/nav-divider.gif") no-repeat 100% 50%;
 
  		}
 
     @media only screen and (min-width:992px) {
         font-size: 1em;
+        padding: .75em 1.33em;
     }
  }
 
   .navbar-default .navbar-nav li:last-child a{
-
- 		&:hover {
- 			background: @navbar-default-link-hover-bg;
- 		}
+    background: @brand-primary;
+ 		
+      &:hover {
+ 			  background: @brand-secondary; 
+ 		   }
  }
 
  .navbar-default .navbar-nav li:last-child a {
-      background: @brand-primary;
+      
  }
 
 .navbar-default .navbar-nav li.active:last-child a {
- 	background: @navbar-default-link-hover-bg;
+ 	background: @brand-secondary;
  }
 
  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
- 	 color: @navbar-default-link-color;
-  	 background-color:@navbar-default-link-hover-bg; 
+ 	 color: @dark-text-clr;
+  	 background-color: @brand-secondary; 
 
  }
 
 .navbar-default button.navbar-toggle, .navbar-default button.navbar-toggle:focus, .navbar-default button.navbar-toggle:active, .navbar-default button.navbar-toggle:hover {
- 	background: @brand-primary;
+ 	background: @brand-secondary;
  }
 
 
@@ -161,7 +162,7 @@
     }
 
     a {
-      background: @brand-primary url(0)!important;
+      background: @brand-secondary url(0)!important;
       padding: 8px;
       width: 100%;
       height: 100%;

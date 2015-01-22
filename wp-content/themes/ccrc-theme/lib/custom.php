@@ -6,11 +6,11 @@
 
 //Load CPTs
 
-$cpt_declarations = scandir( get_template_directory() . "/lib/cpt/" );
-foreach ( $cpt_declarations as $cpt_declaration ) {
-	if ( $cpt_declaration[0] != "." )
-		require get_template_directory() . '/lib/cpt/' . $cpt_declaration;
-}
+// $cpt_declarations = scandir( get_template_directory() . "/lib/cpt/" );
+// foreach ( $cpt_declarations as $cpt_declaration ) {
+// 	if ( $cpt_declaration[0] != "." )
+// 		require get_template_directory() . '/lib/cpt/' . $cpt_declaration;
+// }
 
 // /* Get attachment ID from URL */
 // function get_attachment_id_from_src( $image_src ) {
