@@ -184,18 +184,53 @@ $meta_boxes = array(
 	), 
 
 array(
-		'id' => 'reports-upload-box',
-		'title' => 'Reports upload box',
-		//'slug' => 'report',
-		'pages' => array( 'report' ),
+		'id' => 'case-details',
+		'title' => 'Case details',
+		'pages' => array( 'case' ),
 		'context' => 'normal',
-		'priority' => 'low',
+		'priority' => 'high',
 		'fields' => array(
 			array(
-				'id' => 'report-upload',
-				'label' => 'PDF upload',
-				'type' => 'upload',
-				'desc' => 'Uplod PDF version of report'
+				'id' => 'case-name',
+				'label' => 'Case name',
+				'type' => 'text',
+				'desc' => 'The name of the case'
+			),
+			array(
+				'id' => 'case-reference',
+				'label' => 'Case reference',
+				'type' => 'text',
+				'desc' => 'The refernce number of the case'
+			),
+			array(
+				'id' => 'case-offence',
+				'label' => 'Offence',
+				'type' => 'text',
+				'desc' => 'Type of offence'
+			),
+			array(
+				'id' => 'case-court-date',
+				'label' => 'Court date',
+				'type' => 'text',
+				'desc' => 'Date case referred to court'
+			),
+			array(
+				'id' => 'case-appeal-date',
+				'label' => 'Appeal date',
+				'type' => 'text',
+				'desc' => 'Date of appeal outcome'
+			),
+			array(
+				'id' => 'case-appeal-outcome',
+				'label' => 'Appeal outcome',
+				'type' => 'text',
+				'desc' => 'The appeal outcome'
+			),
+			array(
+				'id' => 'case-judgement',
+				'label' => 'Case judgement',
+				'type' => 'text',
+				'desc' => 'The judgement'
 			)
 		)
 	) 
