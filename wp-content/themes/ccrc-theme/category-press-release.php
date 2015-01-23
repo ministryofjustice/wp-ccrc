@@ -1,6 +1,6 @@
 <?php
 /* 
-Template Name: Category news archive
+Template Name: Press release archive
 */
 ?>
 
@@ -8,8 +8,6 @@ Template Name: Category news archive
 <div class="page-header">
 	<?php the_title( '<h1>', '</h1>' ); ?>
 </div>
-
-
 
 <div class="news-archive-links">
 	<ul>
@@ -21,29 +19,32 @@ Template Name: Category news archive
 		$year = $post->post_name;
 
 		$args = array( 
-			'posts_per_page' => 10, 
+			'posts_per_page' => 2, 
 			'paged' => $paged,
-			'category' => 'news' );
+			'category' => 'press-release' );
+
+
 
 		    $postslist = new WP_Query( $args );
 
 		    if ( $postslist->have_posts() ) :
 		        while ( $postslist->have_posts() ) : $postslist->the_post(); 
 
-		             echo '<li><h4><a href="';
-		             the_permalink();
-		             echo '">';
-		             the_title();
-		             echo '</a></h4>';
-		             echo'<time class="published">'; 
-		             get_the_date();
-		             echo '</time>';
-		             echo '<div class="news-img-wrapper">';
-		             if ( has_post_thumbnail() ) : the_post_thumbnail('large'); 
-		             endif;
-		             echo '</div>';
-		             the_excerpt();
-		             echo '</li><hr/>';
+				 echo '<li>';
+		         echo'<div class="time-wrapper"><time class="published">'; 
+		         echo get_the_date();
+		         echo '</time></div>';
+		         //echo '<div class="news-img-wrapper">';
+		         // if ( has_post_thumbnail() ) : the_post_thumbnail('large'); 
+		         // endif;
+		         echo '<div class="title-excerpt-wrapper">';
+		         echo '<h4><a href="';
+		         the_permalink();
+		         echo '">';
+		         the_title();
+		         echo '</a></h4>';
+		         the_excerpt();
+		         echo '</div></li><hr/>';
 		             
 
 		         endwhile;  

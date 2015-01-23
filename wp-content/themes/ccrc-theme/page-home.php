@@ -87,7 +87,7 @@
 
 				</ul>
 				
-			<a href="/imb/news/" class= "float-right em-link">All press releases ></a>
+			<a href="<?php bloginfo('site_url'); ?>/press-releases/" class= "float-right em-link">All press releases ></a>
 
 			</div>
 

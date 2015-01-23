@@ -5,30 +5,32 @@
       
     </header>
         <div class="row">
-        <div class="col-sm-4 min-col">
-        
-            <?php if ( has_post_thumbnail() ) : ?>
-            <div class="news-img-wrapper">
+          <div class="col-sm-4 min-col">
+          
+              <?php if ( has_post_thumbnail() ) : ?>
+                <div class="news-img-wrapper">
 
-              <?php the_post_thumbnail('large');
-              echo '<span class="img-caption">' . get_post(get_post_thumbnail_id())->post_content . '</span>'; ?>
-            
+                  <?php the_post_thumbnail('large');
+                  echo '<span class="img-caption">' . get_post(get_post_thumbnail_id())->post_content . '</span>'; ?>
+                
+                </div>
+              <?php endif; ?>
+
+              <div class="post-meta">
+                  <?php get_template_part('templates/entry-meta'); ?>
+              </div>
+
             </div>
-            <?php endif; ?>
 
-            <div class="post-meta">
-                <?php get_template_part('templates/entry-meta'); ?>
+
+            <div class="col-sm-8 mac-col">
+              <?php the_content(); ?>
             </div>
 
-          </div>
-
-
-          <div class="col-sm-8 mac-col">
-            <?php the_content(); ?>
           </div>
 
           <div class="prev-next">
-              <?php previous_post_link('%link', '< Previous story', TRUE); ?> | <?php next_post_link('%link', 'Next story >', TRUE); ?> 
+              <?php previous_post_link('%link', '< Previous', TRUE); ?> | <?php next_post_link('%link', 'Next >', TRUE); ?> 
           </div>
           
 
