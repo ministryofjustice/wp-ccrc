@@ -164,12 +164,14 @@
     }
 
     a {
-      background: @brand-primary url(0);
+      background: @brand-secondary url(0);
       padding: 8px;
       width: 100%;
       height: 100%;
       font-size: .9em;
       white-space: normal;
+      color: @dark-text-clr;
+      border-right: 0;
 
             @media only screen and (min-width:768px) {
                 font-size: 1em;
@@ -180,10 +182,16 @@
   
 }
 
-    .dropdown ul.dropdown-menu li a:hover, .dropdown ul.dropdown-menu li a:active, .dropdown ul.dropdown-menu li a:focus {
-      background: @brand-secondary;
-      color: @dark-text-clr;
-    }
+.navbar-default .navbar-nav .dropdown ul.dropdown-menu li a:hover, .navbar-default .navbar-nav .dropdown ul.dropdown-menu li a:active, .dropdown ul.dropdown-menu li a:focus {
+    background: @brand-primary;
+    color: @light-text-clr;
+    border-right: 0;
+      
+      &:last-child {
+        background: @brand-primary;
+        color: @light-text-clr;
+      }
+  }
 
 /* - - - - - - Search - - - - - - */
 
