@@ -211,13 +211,13 @@ array(
 			array(
 				'id' => 'case-court-date',
 				'label' => 'Court date',
-				'type' => 'text',
+				'type' => 'date-picker',
 				'desc' => 'Date case referred to court'
 			),
 			array(
 				'id' => 'case-appeal-date',
 				'label' => 'Appeal date',
-				'type' => 'text',
+				'type' => 'date-picker',
 				'desc' => 'Date of appeal outcome'
 			),
 			array(

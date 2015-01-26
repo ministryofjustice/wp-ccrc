@@ -16,10 +16,10 @@ Template Name: Referred cases archive
 			<div class="filters">
 				<h2>Sort by</h2>
 					<ul class="filters">
-						<li><a href="#">Name</a></li>
-						<li><a href="#">Date referred to court</a></li>
-						<li><a href="#">Date of appeal outcome</a></li>
-						<li><a href="#">Appeal outcome</a></li>
+						<li><a href="?sort_case=name">Name</a></li>
+						<li><a href="?sort_case=referral-date">Date referred to court</a></li>
+						<li><a href="?sort_case=appeal-date">Date of appeal outcome</a></li>
+						<li><a href="?sort_case=outcome">Appeal outcome</a></li>
 					</ul>
 			</div>
 
@@ -41,17 +41,38 @@ Template Name: Referred cases archive
 			<ul>
 
 					<?php
-
+					if(get_query_var('sort_case') == "name") {
+						$sort = array(
+              'order' => 'ASC',
+              'orderby' => 'title',
+            );					
+					} elseif(get_query_var('sort_case') == "referral-date") {
+						$sort = array(
+              'order' => 'DESC',
+              'orderby' => 'meta_value_num',
+              'meta_key' => 'case-court-date',
+            );
+					} elseif(get_query_var('sort_case') == "appeal-date") {
+						$sort = array(
+              'order' => 'DESC',
+              'orderby' => 'meta_value_num',
+              'meta_key' => 'case-appeal-date',
+            );
+					} elseif(get_query_var('sort_case') == "outcome") {
+						$sort = array(
+              'order' => 'ASC',
+              'orderby' => 'meta_value',
+              'meta_key' => 'case-appeal-outcome',
+            );
+					}
 					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-					$year = $post->post_name;
 
 					$args = array( 
 						'posts_per_page' => 20, 
 						'paged' => $paged,
-						'report_year' => $year, 
-						'order'=> 'ASC', 
-						'orderby' => 'title',
-						'post_type' => 'case' );
+						'post_type' => 'case'
+          );
+          if($sort) { $args = array_merge($args, $sort); }
 
 					    $postslist = new WP_Query( $args );
 
@@ -64,13 +85,13 @@ Template Name: Referred cases archive
 							    <p><strong>Offence:</strong> <?php echo get_post_meta( $post->ID, "case-offence", true ); ?></p>
 							    <table>
 								    <tr>
-								    	<td><strong>Referred to court:</strong> <?php echo get_post_meta( $post->ID, "case-court-date", true ); ?></td>
+								    	<td><strong>Referred to court:</strong> <?php echo date("d/m/Y", strtotime(get_post_meta( $post->ID, "case-court-date", true ))); ?></td>
 								    	<td><strong>Appeal outcome:</strong> <?php echo get_post_meta( $post->ID, "case-appeal-outcome", true ); ?></td>
 								    	
 								    	
 								    </tr>
 								    <tr>
-								    	<td><strong>Appeal outcome date:</strong> <?php echo get_post_meta( $post->ID, "case-appeal-date", true ); ?></td>
+								    	<td><strong>Appeal outcome date:</strong> <?php echo date("d/m/Y", strtotime(get_post_meta( $post->ID, "case-appeal-date", true ))); ?></td>
 								    	<td><strong>Judgement:</strong> <?php echo get_post_meta( $post->ID, "case-judgement", true ); ?></td>
 								    	
 								    </tr>
@@ -78,7 +99,6 @@ Template Name: Referred cases archive
 							    </table>
 						    </li>
 
-						    
 					<?php
 					         endwhile;  
 					         	endif;

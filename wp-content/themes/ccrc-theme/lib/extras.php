@@ -21,3 +21,28 @@ function roots_wp_title($title) {
 }
 add_filter('wp_title', 'roots_wp_title', 10);
 
+/**
+ * add_query_vars_filter function.
+ * 
+ * @access public
+ * @param mixed $vars
+ * @return void
+ */
+function add_query_vars_filter($vars){
+  $vars[] = "sort_case";
+  return $vars;
+}
+add_filter('query_vars', 'add_query_vars_filter');
+
+/**
+ * modify_date_picker_date_format function.
+ * 
+ * @access public
+ * @param mixed $format
+ * @param mixed $field_id
+ * @return void
+ */
+function modify_date_picker_date_format($format, $field_id) {
+  return 'yy-mm-dd';
+}
+add_filter('ot_type_date_picker_date_format', 'modify_date_picker_date_format', 10, 2);
