@@ -65,11 +65,12 @@ Template Name: Referred cases archive
 							    <table>
 								    <tr>
 								    	<td><strong>Referred to court:</strong> <?php echo get_post_meta( $post->ID, "case-court-date", true ); ?></td>
-								    	<td><strong>Appeal outcome date:</strong> <?php echo get_post_meta( $post->ID, "case-appeal-date", true ); ?></td>
+								    	<td><strong>Appeal outcome:</strong> <?php echo get_post_meta( $post->ID, "case-appeal-outcome", true ); ?></td>
+								    	
 								    	
 								    </tr>
 								    <tr>
-								    	<td><strong>Appeal outcome:</strong> <?php echo get_post_meta( $post->ID, "case-appeal-outcome", true ); ?></td>
+								    	<td><strong>Appeal outcome date:</strong> <?php echo get_post_meta( $post->ID, "case-appeal-date", true ); ?></td>
 								    	<td><strong>Judgement:</strong> <?php echo get_post_meta( $post->ID, "case-judgement", true ); ?></td>
 								    	
 								    </tr>
