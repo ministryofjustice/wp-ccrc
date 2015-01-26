@@ -15,7 +15,7 @@ Template Name: Referred cases archive
 
 			<div class="filters">
 				<h2>Sort by</h2>
-					<ul class="filters-links">
+					<ul class="filter-links">
 						<li><a href="?sort_case=name">Name</a></li>
 						<li><a href="?sort_case=referral-date">Date referred to court</a></li>
 						<li><a href="?sort_case=appeal-date">Date of appeal outcome</a></li>
