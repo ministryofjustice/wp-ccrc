@@ -75,7 +75,7 @@ var offences = new Bloodhound({
   queryTokenizer: Bloodhound.tokenizers.whitespace,
   limit: 10,
   prefetch: {
-    url: 'http://ccrc.dev/wp-content/themes/ccrc-theme/lib/offences.php',
+    url: '/wp-content/themes/ccrc-theme/lib/offences.php',
     filter: function(list) {
       return $.map(list, function(country) { return { name: country }; });
     }
