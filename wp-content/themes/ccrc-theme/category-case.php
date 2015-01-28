@@ -50,7 +50,8 @@ Template Name: Referred cases archive
             </div>
             
             <input type="hidden" name="sort_case" id="sort_case" value="<?= htmlspecialchars(get_query_var('sort_case')); ?>" />            
-            <input type="submit" value="Search" class="btn btn-default"/>
+            <input type="submit" value="Search" class="btn btn-primary"/>
+            <input type="reset" value="Clear" class="btn btn-default"/>
 
 					</form>
 			</div>
@@ -84,39 +85,43 @@ Template Name: Referred cases archive
             
           $search = array();
             
-          // Create meta query for search 
-          if(!empty(get_query_var('case_name'))) { 
+          // Create meta query for search
+          $case_name_var = get_query_var('case_name');
+          if(!empty($case_name_var)) { 
             $case_name = array(
           		'key'     => 'case-name',
-          		'value'   => htmlspecialchars(get_query_var('case_name')),
+          		'value'   => htmlspecialchars($case_name_var),
           		'compare' => 'LIKE'
           	);
           	$search = array_merge($search, array($case_name));
           } 
           
-          if(!empty(get_query_var('reference'))) { 
+          $reference_var = get_query_var('reference');
+          if(!empty($reference_var)) { 
             $reference = array(
           		'key'     => 'case-reference',
-          		'value'   => htmlspecialchars(get_query_var('reference')),
+          		'value'   => htmlspecialchars($reference_var),
           		'compare' => 'LIKE'
           	);
           	$search = array_merge($search, array($reference));
           } 
           
-          if(!empty(get_query_var('offences'))) { 
+          $offences_var = get_query_var('offences');
+          if(!empty($offences_var)) { 
             $tax = array(array(
           		'taxonomy' => 'offence',
         			'field'    => 'slug',
-        			'terms'    => htmlspecialchars(get_query_var('offences')),
+        			'terms'    => htmlspecialchars($offences_var),
           	));
           } 
           
-          if(!empty(get_query_var('appeal_outcome'))) { 
-            if(htmlspecialchars(get_query_var('appeal_outcome') == 1)) {
+          $appeal_outcome_var = get_query_var('appeal_outcome');
+          if(!empty($appeal_outcome_var)) { 
+            if(htmlspecialchars($appeal_outcome_var) == 1) {
               $value = "Quashed";
-            } elseif(htmlspecialchars(get_query_var('appeal_outcome') == 2)) {
+            } elseif(htmlspecialchars($appeal_outcome_var) == 2) {
               $value = "Upheld";
-            } elseif(htmlspecialchars(get_query_var('appeal_outcome') == 3)) {
+            } elseif(htmlspecialchars($appeal_outcome_var) == 3) {
               $value = "Abandoned";
             }
             $appeal_outcome = array(
@@ -127,10 +132,11 @@ Template Name: Referred cases archive
           	$search = array_merge($search, array($appeal_outcome));
           } 
           
-          if(!empty(get_query_var('judgement'))) { 
-            if(htmlspecialchars(get_query_var('judgement') == 1)) {
+          $judgement_var = get_query_var('judgement');
+          if(!empty($judgement_var)) { 
+            if(htmlspecialchars($judgement_var) == 1) {
               $value = "Available";
-            } elseif(htmlspecialchars(get_query_var('judgement') == 2)) {
+            } elseif(htmlspecialchars($judgement_var) == 2) {
               $value = "Not Available";
             }
             $judgement = array(
@@ -141,19 +147,20 @@ Template Name: Referred cases archive
           	$search = array_merge($search, array($judgement));
           } 
 
-					if(get_query_var('sort_case') == "name") {
+          $sort_case_var = get_query_var('sort_case');
+					if($sort_case_var == "name") {
 						$sort = array(
               'order' => 'ASC',
               'orderby' => 'meta_value',
               'meta_key' => 'case-name',
             );					
-					} elseif(get_query_var('sort_case') == "referral-date") {
+					} elseif($sort_case_var == "referral-date") {
 						$sort = array(
               'order' => 'DESC',
               'orderby' => 'meta_value_num',
               'meta_key' => 'case-court-date',
             );
-					} elseif(get_query_var('sort_case') == "appeal-date") {
+					} elseif($sort_case_var == "appeal-date") {
 						$sort = array(
               'order' => 'DESC',
               'orderby' => 'meta_value_num',
