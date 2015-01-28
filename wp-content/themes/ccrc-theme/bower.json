@@ -16,6 +16,8 @@
     "modernizr": "2.8.2",
     "jquery": "1.11.1",
     "bootstrap": "3.2.0",
-    "respond": "1.4.2"
+    "respond": "1.4.2",
+    "typeahead.js": "~0.10.5",
+    "bootstrap-tokenfield": "~0.12.1"
   }
 }

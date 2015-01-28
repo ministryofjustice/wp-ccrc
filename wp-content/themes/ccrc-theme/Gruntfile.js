@@ -18,6 +18,8 @@ module.exports = function(grunt) {
     'assets/vendor/bootstrap/js/scrollspy.js',
     'assets/vendor/bootstrap/js/tab.js',
     'assets/vendor/bootstrap/js/affix.js',
+    'assets/vendor/typeahead.js/dist/typeahead.bundle.js',
+    'assets/vendor/bootstrap-tokenfield/dist/bootstrap-tokenfield.js',
     'assets/js/plugins/*.js',
     'assets/js/_*.js'
   ];

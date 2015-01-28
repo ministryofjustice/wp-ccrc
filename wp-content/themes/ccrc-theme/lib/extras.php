@@ -29,6 +29,11 @@ add_filter('wp_title', 'roots_wp_title', 10);
  * @return void
  */
 function add_query_vars_filter($vars){
+  $vars[] = "case_name";
+  $vars[] = "reference";
+  $vars[] = "appeal_outcome";
+  $vars[] = "offences";
+  $vars[] = "judgement";
   $vars[] = "sort_case";
   return $vars;
 }

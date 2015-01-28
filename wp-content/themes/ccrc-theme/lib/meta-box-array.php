@@ -203,12 +203,6 @@ array(
 				'desc' => 'The refernce number of the case'
 			),
 			array(
-				'id' => 'case-offence',
-				'label' => 'Offence',
-				'type' => 'text',
-				'desc' => 'Type of offence'
-			),
-			array(
 				'id' => 'case-court-date',
 				'label' => 'Court date',
 				'type' => 'date-picker',
@@ -223,14 +217,53 @@ array(
 			array(
 				'id' => 'case-appeal-outcome',
 				'label' => 'Appeal outcome',
-				'type' => 'text',
-				'desc' => 'The appeal outcome'
+				'type' => 'select',
+				'desc' => 'The appeal outcome',
+				'choices'     => array( 
+          array(
+            'value'       => '',
+            'label'       => __( '-- Choose One --', 'roots' ),
+            'src'         => ''
+          ),
+          array(
+            'value'       => 'Quashed',
+            'label'       => __( 'Quashed', 'roots' ),
+            'src'         => ''
+          ),
+          array(
+            'value'       => 'Upheld',
+            'label'       => __( 'Upheld', 'roots' ),
+            'src'         => ''
+          ),
+          array(
+            'value'       => 'Abandoned',
+            'label'       => __( 'Abandoned', 'roots' ),
+            'src'         => ''
+          )
+        )
 			),
 			array(
 				'id' => 'case-judgement',
 				'label' => 'Case judgement',
-				'type' => 'text',
-				'desc' => 'The judgement'
+				'type' => 'select',
+				'desc' => 'The judgement',
+								'choices'     => array( 
+          array(
+            'value'       => '',
+            'label'       => __( '-- Choose One --', 'roots' ),
+            'src'         => ''
+          ),
+          array(
+            'value'       => 'Available',
+            'label'       => __( 'Available', 'roots' ),
+            'src'         => ''
+          ),
+          array(
+            'value'       => 'Not Available',
+            'label'       => __( 'Not Available', 'roots' ),
+            'src'         => ''
+          )
+        )
 			)
 		)
 	) 

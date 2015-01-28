@@ -68,3 +68,24 @@ $(document).ready(function (){
   $('.navbar-default .navbar-nav li:last-child a, .news ul li:last-child').addClass('last-child');
 
 });
+
+
+var offences = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  limit: 10,
+  prefetch: {
+    url: 'http://ccrc.dev/wp-content/themes/ccrc-theme/lib/offences.php',
+    filter: function(list) {
+      return $.map(list, function(country) { return { name: country }; });
+    }
+  }
+});
+
+offences.initialize();
+ 
+$('#prefetch .typeahead').typeahead(null, {
+  name: 'offences',
+  displayKey: 'name',
+  source: offences.ttAdapter()
+});
