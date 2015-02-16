@@ -6541,7 +6541,7 @@ button.close {
   font-size: 14px;
 }
 body {
-  font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 a {
@@ -7149,6 +7149,9 @@ ul.filter-links li {
 ul.filter-links li a {
   background: #bed9ed;
   padding: 0px 6px;
+}
+ul.filter-links li a.active {
+  background: #96c2e2;
 }
 .filters,
 .stats {
