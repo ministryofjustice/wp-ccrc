@@ -182,7 +182,483 @@ $meta_boxes = array(
 			)
 		)
 	), 
+	array(
+		'id' => 'making-application-metaboxes',
+		'title' => 'Making an Application Options',
+		'slug' => 'making-application',
+		'pages' => array( 'page' ),
+		'context' => 'normal',
+		'priority' => 'high',
+		'fields' => array(
+			array(
+				'id' => 'first-option-title',
+				'label' => 'First option title',
+				'type' => 'text',
+				'desc' => 'The title for the first option on the page'
+			),
+			array(
+				'id' => 'first-option-text',
+				'label' => 'First option text',
+				'type' => 'text',
+				'desc' => 'The text for the first option on the page'
+			),
+			array(
+				'id' => 'first-option-link',
+				'label' => 'First option link',
+				'type' => 'page-select',
+				'desc' => 'The link for the first option on the page'
+			),
+			array(
+				'id' => 'second-option-title',
+				'label' => 'Second option title',
+				'type' => 'text',
+				'desc' => 'The title for the second option on the page'
+			),
+			array(
+				'id' => 'second-option-text',
+				'label' => 'Second option text',
+				'type' => 'text',
+				'desc' => 'The text for the second option on the page'
+			),
+			array(
+				'id' => 'second-option-link',
+				'label' => 'Second option link',
+				'type' => 'page-select',
+				'desc' => 'The link for the first second on the page'
+			),
+			array(
+				'id' => 'third-option-title',
+				'label' => 'Third option title',
+				'type' => 'text',
+				'desc' => 'The title for the third option on the page'
+			),
+			array(
+				'id' => 'third-option-text',
+				'label' => 'Third option text',
+				'type' => 'text',
+				'desc' => 'The text for the third option on the page'
+			),
+			array(
+				'id' => 'third-option-link',
+				'label' => 'Third option link',
+				'type' => 'page-select',
+				'desc' => 'The link for the third option on the page'
+			),
+			array(
+				'id' => 'fourth-option-title',
+				'label' => 'Fourth option title',
+				'type' => 'text',
+				'desc' => 'The title for the fourth option on the page'
+			),
+			array(
+				'id' => 'fourth-option-text',
+				'label' => 'Fourth option text',
+				'type' => 'text',
+				'desc' => 'The text for the fourth option on the page'
+			),
+			array(
+				'id' => 'fourth-option-link',
+				'label' => 'Fourth option link',
+				'type' => 'page-select',
+				'desc' => 'The link for the fourth option on the page'
+			),
 
+		)
+	), 
+	array(
+		'id' => 'related-items-how-it-works',
+		'title' => 'Related items',
+		'slug' => 'how-it-works',
+		'pages' => array( 'page' ),
+		'context' => 'normal',
+		'priority' => 'high',
+		'fields' => array(
+			array(
+				'id' => 'related-info-tab',
+				'label' => 'Related pages',
+				'type' => 'tab'
+			),
+			array(
+				'id' => 'related-info-text-1',
+				'label' => 'First link text',
+				'type' => 'text',
+				'desc' => 'Text for the first related info link'
+			),
+			array(
+				'id' => 'related-info-link-1',
+				'label' => 'First link page',
+				'type' => 'page-select',
+				'desc' => 'Page for the first related info link'
+			),
+			array(
+				'id' => 'related-info-text-2',
+				'label' => 'Second link text',
+				'type' => 'text',
+				'desc' => 'Text for the second related info link'
+			),
+			array(
+				'id' => 'related-info-link-2',
+				'label' => 'Second link page',
+				'type' => 'page-select',
+				'desc' => 'Page for the second related info link'
+			),
+			array(
+				'id' => 'related-pub-tab',
+				'label' => 'Related publications',
+				'type' => 'tab'
+			),
+			array(
+				'id' => 'related-pub-text-1',
+				'label' => 'First related publication text',
+				'type' => 'text',
+				'desc' => 'Text for the first related info link'
+			),
+			array(
+				'id' => 'related-pub-doc-1',
+				'label' => 'First related publication file',
+				'type' => 'upload',
+				'desc' => 'Document for the first related info link'
+			),
+			array(
+				'id' => 'related-pub-text-2',
+				'label' => 'Second related publication text',
+				'type' => 'text',
+				'desc' => 'Text for the second related info link'
+			),
+			array(
+				'id' => 'related-pub-doc-2',
+				'label' => 'Second related publication file',
+				'type' => 'upload',
+				'desc' => 'Document for the second related info link'
+			),
+			array(
+				'id' => 'related-links-tab',
+				'label' => 'Related internet links',
+				'type' => 'tab'
+			),
+			array(
+				'id' => 'related-web-text-1',
+				'label' => 'First related link text',
+				'type' => 'text',
+				'desc' => 'Text for the first related internet link'
+			),
+			array(
+				'id' => 'related-web-link-1',
+				'label' => 'text related link URL',
+				'type' => 'upload',
+				'desc' => 'URL for the first related internet link'
+			),
+			array(
+				'id' => 'related-web-text-2',
+				'label' => 'Second related link text',
+				'type' => 'text',
+				'desc' => 'Text for the second related internet link'
+			),
+			array(
+				'id' => 'related-web-link-2',
+				'label' => 'Second related link URL',
+				'type' => 'text',
+				'desc' => 'URL for the second related internet link'
+			),
+		)
+	), 
+	array(
+		'id' => 'related-items-can-i-apply',
+		'title' => 'Related items',
+		'slug' => 'can-i-apply',
+		'pages' => array( 'page' ),
+		'context' => 'normal',
+		'priority' => 'high',
+		'fields' => array(
+			array(
+				'id' => 'related-info-tab',
+				'label' => 'Related pages',
+				'type' => 'tab'
+			),
+			array(
+				'id' => 'related-info-text-1',
+				'label' => 'First link text',
+				'type' => 'text',
+				'desc' => 'Text for the first related info link'
+			),
+			array(
+				'id' => 'related-info-link-1',
+				'label' => 'First link page',
+				'type' => 'page-select',
+				'desc' => 'Page for the first related info link'
+			),
+			array(
+				'id' => 'related-info-text-2',
+				'label' => 'Second link text',
+				'type' => 'text',
+				'desc' => 'Text for the second related info link'
+			),
+			array(
+				'id' => 'related-info-link-2',
+				'label' => 'Second link page',
+				'type' => 'page-select',
+				'desc' => 'Page for the second related info link'
+			),
+			array(
+				'id' => 'related-pub-tab',
+				'label' => 'Related publications',
+				'type' => 'tab'
+			),
+			array(
+				'id' => 'related-pub-text-1',
+				'label' => 'First related publication text',
+				'type' => 'text',
+				'desc' => 'Text for the first related info link'
+			),
+			array(
+				'id' => 'related-pub-doc-1',
+				'label' => 'First related publication file',
+				'type' => 'upload',
+				'desc' => 'Document for the first related info link'
+			),
+			array(
+				'id' => 'related-pub-text-2',
+				'label' => 'Second related publication text',
+				'type' => 'text',
+				'desc' => 'Text for the second related info link'
+			),
+			array(
+				'id' => 'related-pub-doc-2',
+				'label' => 'Second related publication file',
+				'type' => 'upload',
+				'desc' => 'Document for the second related info link'
+			),
+			array(
+				'id' => 'related-links-tab',
+				'label' => 'Related internet links',
+				'type' => 'tab'
+			),
+			array(
+				'id' => 'related-web-text-1',
+				'label' => 'First related link text',
+				'type' => 'text',
+				'desc' => 'Text for the first related internet link'
+			),
+			array(
+				'id' => 'related-web-link-1',
+				'label' => 'text related link URL',
+				'type' => 'upload',
+				'desc' => 'URL for the first related internet link'
+			),
+			array(
+				'id' => 'related-web-text-2',
+				'label' => 'Second related link text',
+				'type' => 'text',
+				'desc' => 'Text for the second related internet link'
+			),
+			array(
+				'id' => 'related-web-link-2',
+				'label' => 'Second related link URL',
+				'type' => 'text',
+				'desc' => 'URL for the second related internet link'
+			),
+		)
+	),
+	array(
+		'id' => 'related-items-how-to-apply',
+		'title' => 'Form and related items',
+		'slug' => 'how-to-apply',
+		'pages' => array( 'page' ),
+		'context' => 'normal',
+		'priority' => 'high',
+		'fields' => array(
+			array(
+				'id' => 'application-form',
+				'label' => 'Application form',
+				'type' => 'upload',
+				'desc' => 'Upload current version of the application form here'
+			),
+			array(
+				'id' => 'related-info-tab',
+				'label' => 'Related pages',
+				'type' => 'tab'
+			),
+			array(
+				'id' => 'related-info-text-1',
+				'label' => 'First link text',
+				'type' => 'text',
+				'desc' => 'Text for the first related info link'
+			),
+			array(
+				'id' => 'related-info-link-1',
+				'label' => 'First link page',
+				'type' => 'page-select',
+				'desc' => 'Page for the first related info link'
+			),
+			array(
+				'id' => 'related-info-text-2',
+				'label' => 'Second link text',
+				'type' => 'text',
+				'desc' => 'Text for the second related info link'
+			),
+			array(
+				'id' => 'related-info-link-2',
+				'label' => 'Second link page',
+				'type' => 'page-select',
+				'desc' => 'Page for the second related info link'
+			),
+			array(
+				'id' => 'related-pub-tab',
+				'label' => 'Related publications',
+				'type' => 'tab'
+			),
+			array(
+				'id' => 'related-pub-text-1',
+				'label' => 'First related publication text',
+				'type' => 'text',
+				'desc' => 'Text for the first related info link'
+			),
+			array(
+				'id' => 'related-pub-doc-1',
+				'label' => 'First related publication file',
+				'type' => 'upload',
+				'desc' => 'Document for the first related info link'
+			),
+			array(
+				'id' => 'related-pub-text-2',
+				'label' => 'Second related publication text',
+				'type' => 'text',
+				'desc' => 'Text for the second related info link'
+			),
+			array(
+				'id' => 'related-pub-doc-2',
+				'label' => 'Second related publication file',
+				'type' => 'upload',
+				'desc' => 'Document for the second related info link'
+			),
+			array(
+				'id' => 'related-links-tab',
+				'label' => 'Related internet links',
+				'type' => 'tab'
+			),
+			array(
+				'id' => 'related-web-text-1',
+				'label' => 'First related link text',
+				'type' => 'text',
+				'desc' => 'Text for the first related internet link'
+			),
+			array(
+				'id' => 'related-web-link-1',
+				'label' => 'text related link URL',
+				'type' => 'upload',
+				'desc' => 'URL for the first related internet link'
+			),
+			array(
+				'id' => 'related-web-text-2',
+				'label' => 'Second related link text',
+				'type' => 'text',
+				'desc' => 'Text for the second related internet link'
+			),
+			array(
+				'id' => 'related-web-link-2',
+				'label' => 'Second related link URL',
+				'type' => 'text',
+				'desc' => 'URL for the second related internet link'
+			),
+		)
+	), 
+	array(
+		'id' => 'related-items-after-i-apply',
+		'title' => 'Related items',
+		'slug' => 'after-i-apply',
+		'pages' => array( 'page' ),
+		'context' => 'normal',
+		'priority' => 'high',
+		'fields' => array(
+			array(
+				'id' => 'related-info-tab',
+				'label' => 'Related pages',
+				'type' => 'tab'
+			),
+			array(
+				'id' => 'related-info-text-1',
+				'label' => 'First link text',
+				'type' => 'text',
+				'desc' => 'Text for the first related info link'
+			),
+			array(
+				'id' => 'related-info-link-1',
+				'label' => 'First link page',
+				'type' => 'page-select',
+				'desc' => 'Page for the first related info link'
+			),
+			array(
+				'id' => 'related-info-text-2',
+				'label' => 'Second link text',
+				'type' => 'text',
+				'desc' => 'Text for the second related info link'
+			),
+			array(
+				'id' => 'related-info-link-2',
+				'label' => 'Second link page',
+				'type' => 'page-select',
+				'desc' => 'Page for the second related info link'
+			),
+			array(
+				'id' => 'related-pub-tab',
+				'label' => 'Related publications',
+				'type' => 'tab'
+			),
+			array(
+				'id' => 'related-pub-text-1',
+				'label' => 'First related publication text',
+				'type' => 'text',
+				'desc' => 'Text for the first related info link'
+			),
+			array(
+				'id' => 'related-pub-doc-1',
+				'label' => 'First related publication file',
+				'type' => 'upload',
+				'desc' => 'Document for the first related info link'
+			),
+			array(
+				'id' => 'related-pub-text-2',
+				'label' => 'Second related publication text',
+				'type' => 'text',
+				'desc' => 'Text for the second related info link'
+			),
+			array(
+				'id' => 'related-pub-doc-2',
+				'label' => 'Second related publication file',
+				'type' => 'upload',
+				'desc' => 'Document for the second related info link'
+			),
+			array(
+				'id' => 'related-links-tab',
+				'label' => 'Related internet links',
+				'type' => 'tab'
+			),
+			array(
+				'id' => 'related-web-text-1',
+				'label' => 'First related link text',
+				'type' => 'text',
+				'desc' => 'Text for the first related internet link'
+			),
+			array(
+				'id' => 'related-web-link-1',
+				'label' => 'text related link URL',
+				'type' => 'upload',
+				'desc' => 'URL for the first related internet link'
+			),
+			array(
+				'id' => 'related-web-text-2',
+				'label' => 'Second related link text',
+				'type' => 'text',
+				'desc' => 'Text for the second related internet link'
+			),
+			array(
+				'id' => 'related-web-link-2',
+				'label' => 'Second related link URL',
+				'type' => 'text',
+				'desc' => 'URL for the second related internet link'
+			),
+		)
+	),  
 array(
 		'id' => 'case-details',
 		'title' => 'Case details',
