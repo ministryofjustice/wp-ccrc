@@ -21,6 +21,10 @@
 
 /* - - - - - - Navigation - - - - - - */
 
+.nav:before, .nav:after {
+  display: none;
+}
+
 .navbar {
 	margin-bottom: .5em;
 }
@@ -43,21 +47,21 @@
   border-top: 0;
 
  		ul#menu-primary-navigation {
- 			display:inline-block;
+ 			display:table;
  			width: 100%;
  			margin: 0;
  			padding: 0;			
  	}
 
  		@media only screen and (min-width:768px) {
- 			background: @brand-primary;
+
  		}
 
  }
 
    .navbar-default .navbar-nav li {
    		text-align: center;
-   		width: 49.3%;
+   		width: 49%;
    		float: left;
    		margin-bottom: 4px;
       position: relative;
@@ -74,6 +78,8 @@
  		@media only screen and (min-width:768px) {
       width: auto;
  			margin-bottom: 0;
+      display: table-cell;
+      float: none;
 
  			   	&:nth-child(odd) {
    				margin-right: 0;
@@ -88,9 +94,8 @@
  	display: block;
  	font-weight: 500;
   font-size: .9em;
-  padding: .55em .5em;
+  padding: .55em 0;
  	background-color: @brand-primary;
-  box-sizing: border-box;
 
  		&:hover, &:focus { 
  			background-color: @brand-secondary; 
@@ -98,27 +103,21 @@
 
  		@media only screen and (min-width:768px) {
 
- 			background: @brand-primary /*url("../img/nav-divider.gif") no-repeat 100% 50%*/;
-      border-right: 2px solid #fff;
+ 			background: @brand-primary;
+      border-right: 2px solid @brand-secondary;
  		}
 
     @media only screen and (min-width:992px) {
         font-size: 1em;
-        padding: .515em 1.156em;
+        padding: .515em 0;
     }
  }
 
   .navbar-default .navbar-nav li:last-child a{
-    //background: @brand-primary;
     border-right: 0;
- 		
       &:hover {
  			  background: @brand-secondary; 
  		   }
- }
-
- .navbar-default .navbar-nav li:last-child a {
-      
  }
 
 .navbar-default .navbar-nav li.active:last-child a {
@@ -164,7 +163,7 @@
     }
 
     a {
-      background: @brand-secondary url(0);
+      background: @brand-secondary;
       padding: 8px;
       width: 100%;
       height: 100%;
@@ -187,10 +186,6 @@
     color: @light-text-clr;
     border-right: 0;
       
-      &:last-child {
-        background: @brand-primary;
-        color: @light-text-clr;
-      }
   }
 
 /* - - - - - - Search - - - - - - */
