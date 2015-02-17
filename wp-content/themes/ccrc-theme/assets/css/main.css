@@ -7077,6 +7077,9 @@ figure.alignnone {
 .quick-links ul li.ql4 {
   background: #006685 url('../img/bars-medium.png') no-repeat 10px 50%;
 }
+.main .row .max-col img {
+  width: auto;
+}
 .news ul li {
   float: none;
   list-style: none;
@@ -7177,5 +7180,167 @@ ul.filter-links li a.active {
 }
 .case-details table tr td {
   padding: 0 2em 1em 0;
+}
+.making-application h1 {
+  margin: 0 0 .5em 0;
+  color: #006685;
+}
+.making-application h2 {
+  font-size: 1.5em;
+  color: #006685;
+}
+.process {
+  margin-top: 2em;
+}
+.process div {
+  display: block;
+  width: 100%;
+  background: #006685;
+  height: 180px;
+  color: #fff;
+  margin-bottom: 2.5em;
+  padding: 20px 0 0 0 ;
+  position: relative;
+}
+.process div a {
+  color: #ffffff;
+}
+.process div span {
+  font-size: 6em;
+  float: left;
+  margin: 0 20px;
+  line-height: 95%;
+  letter-spacing: -3px;
+  font-weight: 500;
+}
+.process div h2 {
+  font-size: 1.8em;
+  margin: 0 0 0 0;
+  background: #006685;
+  padding: 3px;
+  display: inline-block;
+}
+.process div h2:hover {
+  text-decoration: underline;
+}
+.process div p {
+  margin: 10px 0 0 0;
+  background: #006685;
+  padding: 3px;
+  display: inline-block;
+  max-width: 40%;
+}
+.process div p:hover {
+  text-decoration: underline;
+}
+.process div:after {
+  top: 100%;
+  left: 30%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(0, 102, 133, 0);
+  border-top-color: #006685;
+  border-width: 30px;
+  margin-left: -30px;
+}
+.process div.process-1 {
+  background: #006685 url("../img/process-1.jpg") 100% 50% no-repeat;
+  -webkit-background-size: 40% 40%;
+          background-size: 40%;
+}
+.process div.process-2 {
+  background: #006685 url("../img/process-2.jpg") 100% 50% no-repeat;
+  -webkit-background-size: 40% 40%;
+          background-size: 40%;
+}
+.process div.process-3 {
+  background: #006685 url("../img/process-3.jpg") 100% 50% no-repeat;
+  -webkit-background-size: 40% 40%;
+          background-size: 40%;
+}
+.process div.process-4 {
+  background: #006685 url("../img/process-4.jpg") 100% 50% no-repeat;
+  -webkit-background-size: 40% 40%;
+          background-size: 40%;
+}
+.process div.process-4:after {
+  border: 0;
+}
+/* Related links */
+.related {
+  background: #eef5fa;
+  padding: 12px;
+}
+.related h3 {
+  font-size: 1.2em;
+}
+.related h3:first-child {
+  margin-top: 0;
+}
+.related ul {
+  list-style: disc;
+  color: #006685;
+  margin-left: 24px;
+}
+.related ul li {
+  color: #000000;
+  margin-bottom: .5em;
+}
+/*  Heading icons */
+.exclaim {
+  background: url("../img/alert-large.gif") 0% 50% no-repeat;
+  padding: 1em 0 1em 3em;
+}
+.scales {
+  background: url("../img/decision-large.gif") 0% 50% no-repeat;
+  padding: 1em 0 1em 3em;
+}
+.map {
+  background: url("../img/map-large.gif") 0% 50% no-repeat;
+  padding: 1em 0 1em 3em;
+}
+.evidence {
+  background: url("../img/stardoc-large.gif") 0% 50% no-repeat;
+  padding: 1em 0 1em 3em;
+}
+.check {
+  background: url("../img/check-large.gif") 0% 50% no-repeat;
+  padding: 1em 0 1em 3em;
+}
+.time {
+  background: url("../img/time-large.gif") 0% 50% no-repeat;
+  padding: 1em 0 1em 3em;
+}
+.review {
+  background: url("../img/review-large.gif") 0% 50% no-repeat;
+  padding: 1em 0 1em 3em;
+}
+.view {
+  background: url("../img/view-large.gif") 0% 50% no-repeat;
+  padding: 1em 0 1em 3em;
+}
+.response {
+  background: url("../img/response-large.gif") 0% 50% no-repeat;
+  padding: 1em 0 1em 3em;
+}
+/*  Download form */
+.application-form {
+  margin: 1em 0 1.5em 0;
+  padding: 12px 15px 15px 5em;
+  background: #eef5fa url('../img/report-icon.png') 15px 13px no-repeat;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .application-form {
+    width: 60%;
+  }
+}
+.file-size {
+  display: block;
+  margin: .5em 0;
 }
 /*# sourceMappingURL=main.css.map */
