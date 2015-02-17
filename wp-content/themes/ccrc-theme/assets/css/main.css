@@ -6972,6 +6972,20 @@ figure.alignnone {
 .content-info #footer-links a {
   color: #ffffff;
 }
+.content-info #lang-links ul {
+  width: 100%;
+  display: table;
+  margin: 2em 0 0 0;
+}
+.content-info #lang-links ul li {
+  display: table-cell;
+  width: auto;
+  float: none!important;
+  text-align: center;
+}
+.content-info #lang-links ul a {
+  color: #ffffff;
+}
 #news-banner {
   display: block;
   margin-bottom: 2em;
