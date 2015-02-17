@@ -33,3 +33,13 @@ add_filter( 'ot_use_theme_options', '__return_false' );
 add_filter( 'ot_header_version_text', '__return_null' );
 //load_template( trailingslashit( get_template_directory() ) . 'lib/theme-options.php' );
 require_once (trailingslashit( get_template_directory() ) . 'option-tree/ot-loader.php');
+
+/* Shortcode for headings with icons */
+
+add_shortcode( 'heading', 'heading_output' );
+function heading_output( $atts, $content ) {
+    $atts = shortcode_atts( array(
+        'icon' => 'no-icon'
+    ), $atts );
+    return '<h2 class="' . $atts['icon'] . '">' . $content . '</h2>';
+}
