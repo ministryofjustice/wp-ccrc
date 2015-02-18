@@ -6843,7 +6843,7 @@ figure.alignnone {
   .navbar-default .navbar-nav li a,
   .navbar-default .navbar-nav > .open > a {
     background: #006685;
-    border-right: 2px solid #bed9ed;
+    border-right: 2px solid #ffffff;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -6959,32 +6959,88 @@ figure.alignnone {
 .content-info {
   background: #006685;
   display: inline-block;
-  min-height: 160px;
+  min-height: 360px;
   width: 100%;
   margin-top: 1em;
   color: #ffffff;
 }
-.content-info #footer-links {
-  display: inline-block;
-  width: auto;
-  margin: 9em auto 2.5em auto;
+.content-info #footer-links ul {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid #ffffff;
+  padding: 12px 0 0 0;
 }
-.content-info #footer-links a {
+@media (min-width: 768px) {
+  .content-info #footer-links ul {
+    border-top: 0;
+  }
+}
+.content-info #footer-links ul li {
+  display: inline-block;
+  width: 48%;
+  font-size: .75em;
+  white-space: nowrap;
+  padding: 0 12px 0 12px;
+  margin-top: 12px;
+  text-align: center;
+}
+@media (min-width: 480px) {
+  .content-info #footer-links ul li {
+    margin-top: 0;
+    width: 32%;
+    white-space: nowrap;
+    font-size: .85em;
+  }
+}
+@media (min-width: 992px) {
+  .content-info #footer-links ul li {
+    width: auto;
+    border-right: 2px solid #ffffff;
+    font-size: 1em;
+  }
+  .content-info #footer-links ul li:last-child {
+    border-right: 0;
+  }
+}
+.content-info #footer-links ul a {
   color: #ffffff;
 }
 .content-info #lang-links ul {
   width: 100%;
   display: table;
-  margin: 2em 0 0 0;
+  margin: 2em 0 2em 0;
+  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  padding: 2em 0;
 }
 .content-info #lang-links ul li {
-  display: table-cell;
-  width: auto;
-  float: none!important;
+  display: inline-block;
+  width: 24.5%;
+  margin-top: 12px;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .content-info #lang-links ul li {
+    width: auto;
+    display: table-cell;
+    float: none;
+    margin-top: 0;
+  }
 }
 .content-info #lang-links ul a {
   color: #ffffff;
+}
+#footer-about,
+#footer-contact {
+  font-size: .85em;
+  margin: 24px 0 0 0;
+}
+#footer-contact {
+  border-left: 1px solid #ffffff;
+}
+#footer-about p {
+  max-width: 75%;
 }
 #news-banner {
   display: block;

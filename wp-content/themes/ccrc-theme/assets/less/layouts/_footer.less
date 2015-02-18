@@ -1,39 +1,92 @@
 .content-info { 
 	background: @brand-primary;
 	display: inline-block;
-	min-height: 160px;
+	min-height: 360px;
 	width: 100%; 
-	// position: absolute;
-	// bottom: 0;
 	margin-top: 1em;
 	color: @light-text-clr;
 }
 
 .content-info #footer-links {
-	// position: absolute;
-	// bottom: 10px;
-	// left: 18px;
-	display: inline-block;
-	width: auto;
-	margin: 9em auto 2.5em auto;
+	// margin: 9em auto 2.5em auto;
+ 		ul {
+ 			display: block;
+ 			width: 100%;
+ 			overflow: hidden;
+ 			border-top: 1px solid @light-text-clr;
+ 			padding: 12px 0 0 0;
+ 				@media (min-width: @screen-sm) {
+ 					border-top: 0;
+ 				}
+ 			li {
+			display: inline-block;
+			width: 48%;
+			font-size: .75em;
+			white-space: nowrap;
+			padding: 0 12px 0 12px;
+			margin-top: 12px;
+			text-align: center;
+
+				@media (min-width: @screen-xs) {
+					margin-top: 0;
+					width: 32%;
+					white-space: nowrap;
+					font-size: .85em;
+
+					
+				}
+				@media (min-width: @screen-md) {
+					width: auto;
+					border-right: 2px solid @light-text-clr;
+					font-size: 1em;
+						&:last-child {
+							border-right: 0;
+						}
+
+					}
+		}
+
+		a {
+			color: @light-text-clr;
+		}
+	}
+}
+
+
+.content-info #lang-links ul {
+	width: 100%;
+	display: table;
+	margin: 2em 0 2em 0;
+	border-bottom: 1px solid @light-text-clr;
+	border-top: 1px solid @light-text-clr;
+	padding: 2em 0;
+		li {
+			display: inline-block;
+			width: 24.5%;
+			margin-top: 12px;
+			text-align: center;
+				@media (min-width: @screen-sm) {
+					width: auto;
+					display: table-cell;
+					float: none;
+					margin-top: 0;
+				}
+			}
 
 		a {
 			color: @light-text-clr;
 		}
 }
 
-.content-info #lang-links ul {
-	width: 100%;
-	display: table;
-	margin: 2em 0 0 0;
-		li {
-			display: table-cell;
-			width: auto;
-			float: none!important;	
-			text-align: center;
-			}
+#footer-about, #footer-contact {
+	font-size: .85em;
+	margin: 24px 0 0 0;
+}
 
-		a {
-			color: @light-text-clr;
-		}
+#footer-contact {
+	border-left: 1px solid @light-text-clr;
+}
+
+#footer-about p {
+	max-width: 75%;
 }
