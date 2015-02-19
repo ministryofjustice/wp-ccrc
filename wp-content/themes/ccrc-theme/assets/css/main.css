@@ -7232,6 +7232,14 @@ ul.filter-links a.active {
   border-bottom: 5px solid #006685;
   padding-bottom: 12px;
 }
+.stats ul li {
+  margin: 0 0 6px 0;
+  font-size: .95em;
+}
+.stats span {
+  font-weight: 500;
+  margin-right: 3px;
+}
 .filters .twitter-typeahead {
   display: block !important;
 }

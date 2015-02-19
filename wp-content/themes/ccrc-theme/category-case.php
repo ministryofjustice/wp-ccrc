@@ -60,11 +60,11 @@ Template Name: Referred cases archive
 				<h2>Case Statistics</h2>
 				<p>Figures to 31 October 2014</p>
 					<ul>
-						<li>Total applications*:	18513</li>
-						<li>Cases waiting:	688</li>
-						<li>Cases under review:	835</li>
-						<li>Completed:	16990 (incl. ineligible), 565 referrals</li>
-						<li>Heard by Court of Appeal:	 543 (374 quashed, 153 upheld)</li>
+						<li><span>Total applications*:</span>	18513</li>
+						<li><span>Cases waiting:</span>	688</li>
+						<li><span>Cases under review:</span>	835</li>
+						<li><span>Completed:</span>	16990 (incl. ineligible), 565 referrals</li>
+						<li><span>Heard by Court of Appeal:</span>	 543 (374 quashed, 153 upheld)</li>
 					</ul>
 			</div>
 		</div>
