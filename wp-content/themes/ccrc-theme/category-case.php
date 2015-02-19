@@ -55,15 +55,6 @@ Template Name: Referred cases archive
 
 					</form>
 			</div>
-			
-			<div class="filters">
-				<h2>Sort by</h2>
-					<ul class="filter-links"> 
-						<li><a href="?<?= htmlspecialchars(http_build_query(array_merge($_GET, array("sort_case"=>"name")))) ?>"<?php if(get_query_var('sort_case') == "name") { echo ' class="active" '; } ?>>Name</a></li>
-						<li><a href="?<?= htmlspecialchars(http_build_query(array_merge($_GET, array("sort_case"=>"referral-date")))) ?>"<?php if(get_query_var('sort_case') == "referral-date") { echo ' class="active" '; } ?>>Date referred to court</a></li>
-						<li><a href="?<?= htmlspecialchars(http_build_query(array_merge($_GET, array("sort_case"=>"appeal-date")))) ?>"<?php if(get_query_var('sort_case') == "appeal-date") { echo ' class="active" '; } ?>>Date of appeal outcome</a></li>
-					</ul>
-			</div>
 
 			<div class="stats">
 				<h2>Case Statistics</h2>
@@ -79,6 +70,14 @@ Template Name: Referred cases archive
 		</div>
 
 		<div class="col-sm-8 max-col">
+          <div class="filters">
+        <h2>Sort by</h2>
+          <ul class="filter-links"> 
+            <li><a href="?<?= htmlspecialchars(http_build_query(array_merge($_GET, array("sort_case"=>"name")))) ?>"<?php if(get_query_var('sort_case') == "name") { echo ' class="active" '; } ?>>Name</a></li>
+            <li><a href="?<?= htmlspecialchars(http_build_query(array_merge($_GET, array("sort_case"=>"referral-date")))) ?>"<?php if(get_query_var('sort_case') == "referral-date") { echo ' class="active" '; } ?>>Date referred to court</a></li>
+            <li><a href="?<?= htmlspecialchars(http_build_query(array_merge($_GET, array("sort_case"=>"appeal-date")))) ?>"<?php if(get_query_var('sort_case') == "appeal-date") { echo ' class="active" '; } ?>>Date of appeal outcome</a></li>
+          </ul>
+      </div>
 			<div class="case-details">
 			<ul>
           <?php 

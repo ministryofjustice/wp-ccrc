@@ -7209,21 +7209,28 @@ li .news-details .home-news-img-wrapper {
   font-size: .75em;
   color: #aaaaaa;
 }
+ul.filter-links {
+  width: 100%;
+  overflow: hidden;
+}
 ul.filter-links li {
-  margin-top: 1em;
+  margin: 12px 12px 12px 0;
+  float: left;
 }
-ul.filter-links li a {
+ul.filter-links a {
+  background: #006685;
+  padding: 4px 8px;
+  color: #ffffff;
+}
+ul.filter-links a.active {
   background: #bed9ed;
-  padding: 0px 6px;
-}
-ul.filter-links li a.active {
-  background: #96c2e2;
+  color: #000000;
 }
 .filters,
 .stats {
   display: block;
   border-bottom: 5px solid #006685;
-  padding-bottom: 1em;
+  padding-bottom: 12px;
 }
 .filters .twitter-typeahead {
   display: block !important;

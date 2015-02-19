@@ -229,23 +229,33 @@ li .news-details {
 	}
 }
 
-ul.filter-links li {
-	
-	margin-top: 1em;
+ul.filter-links {
+	width: 100%;
+	overflow: hidden;
+		 li {
+		 	margin: 12px 12px 12px 0;
+		 	float: left;
+
+		 }
 
 		a {
-			background: @brand-secondary;
-			padding: 0px 6px;
+			background: @brand-primary;
+			padding: 4px 8px;
+			color: @light-text-clr;
 		}
 		
 		a.active {
-  		background:darken(@brand-secondary, 10%);
+  		background: @brand-secondary;
+  		color: @dark-text-clr;
 		}
-
 }
 
+
+
 .filters, .stats{
-	.side-item
+	display: block;
+	border-bottom: 5px solid #006685;
+	padding-bottom: 12px;
 }
 
 .filters .twitter-typeahead {
