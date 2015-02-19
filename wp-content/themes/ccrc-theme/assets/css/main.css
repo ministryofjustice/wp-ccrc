@@ -7233,8 +7233,12 @@ ul.filter-links a.active {
   padding-bottom: 12px;
 }
 .stats ul li {
-  margin: 0 0 6px 0;
+  margin: 0 0 0 0;
   font-size: .95em;
+  padding: 6px 0 6px 0;
+}
+.stats ul li:nth-child(odd) {
+  background: #fafcfe;
 }
 .stats span {
   font-weight: 500;
