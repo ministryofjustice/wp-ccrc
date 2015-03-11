@@ -6563,6 +6563,10 @@ figure {
 .main .col-sm-8 h2:first-of-type {
   margin-top: 0;
 }
+.main .col-sm-8 ul {
+  list-style: disc;
+  margin-left: 1.5em;
+}
 .max-col {
   border-left: 1px solid #c5c5c5;
 }
