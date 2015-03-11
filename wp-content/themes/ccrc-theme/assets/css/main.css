@@ -6772,6 +6772,10 @@ figure.alignnone {
   display: inline-block;
   width: 33%;
 }
+#branding svg {
+  width: 100%;
+  max-height: 78px;
+}
 /* - - - - - - Navigation - - - - - - */
 .nav:before,
 .nav:after {
@@ -6933,6 +6937,10 @@ figure.alignnone {
     width: 36%;
     margin: 1em 0 0 0;
   }
+}
+#search svg {
+  width: 29px;
+  height: 27px;
 }
 .form-control {
   border-radius: 0;
