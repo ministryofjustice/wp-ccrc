@@ -43,3 +43,24 @@ function heading_output( $atts, $content ) {
     ), $atts );
     return '<h2 class="' . $atts['icon'] . '">' . $content . '</h2>';
 }
+
+/**
+ * Hide editor on homepage.
+ *
+ */
+add_action('init', 'remove_editor_init');
+function remove_editor_init() {
+    // if post not set, just return 
+    // fix when post not set, throws PHP's undefined index warning
+    if (isset($_GET['post'])) {
+        $post_id = $_GET['post'];
+    } else if (isset($_POST['post_ID'])) {
+        $post_id = $_POST['post_ID'];
+    } else {
+        return;
+    }
+    $template_file = get_post_meta($post_id, '_wp_page_template', TRUE);
+    if ($template_file == 'page-home.php') {
+        remove_post_type_support('page', 'editor');
+    }
+}
