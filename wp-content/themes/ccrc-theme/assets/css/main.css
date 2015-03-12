@@ -6567,6 +6567,11 @@ figure {
   list-style: disc;
   margin-left: 1.5em;
 }
+.main .col-sm-8 .case-details ul,
+.main .col-sm-8 .filters ul {
+  list-style: none;
+  margin-left: 0;
+}
 .max-col {
   border-left: 1px solid #c5c5c5;
 }
