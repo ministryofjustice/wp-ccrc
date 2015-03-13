@@ -7171,7 +7171,7 @@ figure.alignnone {
   margin: 1em 0 0 0;
 }
 .twitter a {
-  padding: 10px 10px 16px 10px;
+  padding: 10px 10px 16px 1px;
   background: #006685;
   color: #ffffff;
   font-weight: 500;
