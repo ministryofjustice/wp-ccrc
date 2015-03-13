@@ -40,14 +40,14 @@ Template Name: Referred cases archive
               </select>
             </div>
             
-            <div class="form-group">  
+            <!-- <div class="form-group">  
               <label for="judgement">Judgement</label>
               <select class="form-control" id="judgement" name="judgement">
                 <option></option>
                 <option value="1"<?php if(htmlspecialchars(get_query_var('judgement')) == '1') { echo ' selected="selected"'; } ?>>Available</option>
                 <option value="2"<?php if(htmlspecialchars(get_query_var('judgement')) == '2') { echo ' selected="selected"'; } ?>>Not available</option>
               </select>
-            </div>
+            </div> -->
             
             <input type="hidden" name="sort_case" id="sort_case" value="<?= htmlspecialchars(get_query_var('sort_case')); ?>" />            
             <input type="submit" value="Search" class="btn btn-primary"/>
@@ -183,7 +183,7 @@ Template Name: Referred cases archive
 					        while ( $postslist->have_posts() ) : $postslist->the_post(); ?>
 						<li>
 						    <h3><?= get_post_meta( $post->ID, "case-name", true ); ?></h3>
-							    <p><strong>Reference: </strong><?php echo get_post_meta( $post->ID, "case-reference", true ); ?></p>
+							    
                   <?php
                   $terms = get_the_terms($post->ID, 'offence');                  						
                   if ($terms && !is_wp_error($terms)):                   
@@ -197,14 +197,14 @@ Template Name: Referred cases archive
 							    
 							    <table>
 								    <tr>
-								    	<td><strong>Referred to court:</strong> <?php echo date("d/m/Y", strtotime(get_post_meta( $post->ID, "case-court-date", true ))); ?></td>
+								    	<td><strong>Reference: </strong><?php echo get_post_meta( $post->ID, "case-reference", true ); ?></td>
 								    	<td><strong>Appeal outcome:</strong> <?php echo get_post_meta( $post->ID, "case-appeal-outcome", true ); ?></td>
 								    	
 								    	
 								    </tr>
 								    <tr>
+								    	<td><strong>Referred to court:</strong> <?php echo date("d/m/Y", strtotime(get_post_meta( $post->ID, "case-court-date", true ))); ?></td>
 								    	<td><strong>Appeal outcome date:</strong> <?php echo date("d/m/Y", strtotime(get_post_meta( $post->ID, "case-appeal-date", true ))); ?></td>
-								    	<td><strong>Judgement:</strong> <?php echo get_post_meta( $post->ID, "case-judgement", true ); ?></td>
 								    	
 								    </tr>
 

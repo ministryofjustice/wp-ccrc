@@ -718,29 +718,29 @@ array(
           )
         )
 			),
-			array(
-				'id' => 'case-judgement',
-				'label' => 'Case judgement',
-				'type' => 'select',
-				'desc' => 'The judgement',
-								'choices'     => array( 
-          array(
-            'value'       => '',
-            'label'       => __( '-- Choose One --', 'roots' ),
-            'src'         => ''
-          ),
-          array(
-            'value'       => 'Available',
-            'label'       => __( 'Available', 'roots' ),
-            'src'         => ''
-          ),
-          array(
-            'value'       => 'Not Available',
-            'label'       => __( 'Not Available', 'roots' ),
-            'src'         => ''
-          )
-        )
-			)
+			// array(
+			// 	'id' => 'case-judgement',
+			// 	'label' => 'Case judgement',
+			// 	'type' => 'select',
+			// 	'desc' => 'The judgement',
+			// 					'choices'     => array( 
+   //        array(
+   //          'value'       => '',
+   //          'label'       => __( '-- Choose One --', 'roots' ),
+   //          'src'         => ''
+   //        ),
+   //        array(
+   //          'value'       => 'Available',
+   //          'label'       => __( 'Available', 'roots' ),
+   //          'src'         => ''
+   //        ),
+   //        array(
+   //          'value'       => 'Not Available',
+   //          'label'       => __( 'Not Available', 'roots' ),
+   //          'src'         => ''
+   //        )
+   //      )
+			// )
 		)
 	) 
 );
