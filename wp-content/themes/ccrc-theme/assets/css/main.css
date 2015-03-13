@@ -6568,7 +6568,8 @@ figure {
   margin-left: 1.5em;
 }
 .main .col-sm-8 .case-details ul,
-.main .col-sm-8 .filters ul {
+.main .col-sm-8 .filters ul,
+.main .col-sm-8 .news ul {
   list-style: none;
   margin-left: 0;
 }
@@ -7066,7 +7067,7 @@ figure.alignnone {
   display: block;
   margin-bottom: 2em;
   height: 153px;
-  background-image: url("../img/ccrc-news-banner.jpg");
+  background-image: url("../img/home-banner.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
@@ -7162,6 +7163,27 @@ figure.alignnone {
 }
 .main .row .max-col img {
   width: auto;
+}
+.twitter {
+  padding-bottom: 0;
+}
+.twitter iframe {
+  margin: 1em 0 0 0;
+}
+.twitter a {
+  padding: 10px 10px 16px 10px;
+  background: #006685;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.2em;
+  margin: .5em 0;
+  display: inline-block;
+  width: 100%;
+}
+.twitter svg {
+  height: 26px;
+  position: relative;
+  bottom: -6px;
 }
 .news ul li {
   float: none;

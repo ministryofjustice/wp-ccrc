@@ -27,12 +27,12 @@ Template Name: Homepage
   				</ul>
   			</div>
 
-  			<div class="about side-item">
+  			<!-- <div class="about side-item">
   				<h3><?php echo get_post_meta( $post->ID, "sidebar-text-title", true ); ?></h3>
   				<p><?php echo get_post_meta( $post->ID, "sidebar-text-p1", true ); ?></p>
   				<p><?php echo get_post_meta( $post->ID, "sidebar-text-p2", true ); ?></p>
   				<a href="<?php echo get_permalink( get_post_meta( $post->ID, "sidebar-link", true )); ?>" class="about-home">Read more about us</a>
-  			</div>
+  			</div> -->
 
    			<div class="links side-item">
   				<h3>Related links</h3>
@@ -43,6 +43,15 @@ Template Name: Homepage
   					<li><a href="<?php echo get_post_meta( $post->ID, "related-link-4", true ); ?>"><?php echo get_post_meta( $post->ID, "related-4", true ); ?></a></li>
   				</ul>
   			</div>
+  			  			<div class="twitter side-item">
+  			<script src="https://platform.twitter.com/widgets.js"></script>
+
+<a href="https://twitter.com/intent/follow?screen_name=MOJDigital"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="50" height="41" viewBox="0 0 50 41">
+  <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAApCAMAAABA8IrbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABy1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAABJV5kDAAAAl3RSTlMAI3u74vLqyZI8HAEGlLktKr5zrSgk21YUXA47FvHK9EmQzgfPEsfWG2LlYzWvg93uQuj+zI38F99+OO0PfOEZoaAsnsEQUKpGpeYD2oxIX/XEm3lXlrPXVZXFDIjU0feGUjDVHi7Zo/sVP6wv3P1x0uwfSltnMqSC+m8mbiu605i03ot49rUzUbfL+XIgirDr7+engEwYAZX1DAAAAAFiS0dEAIgFHUgAAAAJcEhZcwAALiMAAC4jAXilP3YAAAHISURBVEjHjdTlWwJBEAbwFUHEbjGwuxUDu8VCRbE7wO7u7s79dz3Qg4vZu30/8HAz+4O5hVuEJOOmcFeqPNSeGmfFy1sS+PhiNn7+jkpAYJCDBIfAIjQMcxKOtBHBGEfaO1FY6QOJaB3mJSaWeYlztOIxTkgESBIWR4FQMtNKYd6mpolEuhhkZKKs7Byml2u/yssXkgKR0BcWheHiEqZn+CuU8kUZBlNewZ1ZreGSSlBUVTuaNc5CbZ2L1EOiofGv2cSpGZtZ0gKIVrbZpuKW200dWtJgBucMnYJOl7m7x9IL3Ylr7j5Ml/7/9doBhAb1VGTonwxj5YhllIoY2bHGmItxKjLBknjKO8F4kiVT1KTEuWFmSjHt2uMZSmLi/AUH6IiV+7e10PwuNv7ToZ2dkyWZPDGP0MKiDFK18ciSfjnGtiJNVgUP+prsWOvCs2FDlmyKjqAtGZENHHTbkiIPOhuRRi1BdhCcyd3p1GJQRCBy9vYhcUAGh7PgdxwRQUAvCLCFsP54+wQGp1bR2oX6GtPZ+QVpqy6Bj2+8uibv7c0tYai7exgY8xE5/qUPguWPDU9uSCbP4S+vhYY33fuHzfz59f1DXvkLJfDJB+Z8qrsAAAAASUVORK5CYII=" width="50" height="41"/>
+</svg> Follow @MOJDigital</a>
+
+  			</div>
+  			
   		</div>
   		<div class="col-sm-8 max-col">
 			<div class="intro main-item">
