@@ -59,13 +59,14 @@ Template Name: Referred cases archive
 			<div class="stats">
 				<h2>Case Statistics</h2>
 				<p>Figures to 31 October 2014</p>
-					<ul>
-						<li><span>Total applications*:</span>	18513</li>
-						<li><span>Cases waiting:</span>	688</li>
-						<li><span>Cases under review:</span>	835</li>
-						<li><span>Completed:</span>	16990 (incl. ineligible), 565 referrals</li>
-						<li><span>Heard by Court of Appeal:</span>	 543 (374 quashed, 153 upheld)</li>
-					</ul>
+          <ul>
+            <li><span>Completed:</span> <?php echo get_post_meta( 167, "completed-referrals", true ); ?> referrals (<?php echo get_post_meta( 167, "completed-referrals-ineligible", true ); ?> incl. ineligible)</li>
+            <li><span>Total applications*:</span> <?php echo get_post_meta( 167, "total-applications", true ); ?></li>
+            <li><span>Cases waiting:</span> <?php echo get_post_meta( 167, "cases-waiting", true ); ?></li>
+            <li><span>Cases under review:</span> <?php echo get_post_meta( 167, "completed-referrals", true ); ?></li>
+            
+            <li><span>Heard by Court of Appeal:</span> <?php echo get_post_meta( 167, "heard-by-court-of-appeal", true ); ?></li>
+          </ul>
 			</div>
 		</div>
 

@@ -282,22 +282,34 @@ ul.filter-links {
 	padding-bottom: 12px;
 }
 
-.stats {
+.main .stats {
 
-	 ul li {
+	 ul {
+	 	list-style: none;
+	 	margin-left: 0;
+	 	margin: 1em 0 2em 0 ;
+	  li {
 	 	margin: 0 0 0 0;
 		font-size: .95em;
 		padding: 6px 0 6px 0;
 			&:nth-child(odd) {
 				background: #fafcfe;
-
 			}
-	}
+			span {
+				min-width: 180px;
+				display: inline-block;
+			}
+		}
 		span {
 			font-weight: 500;
 			margin-right: 3px;
 		}
+	}
+	p.sub {
+	font-size: .85em!important;
+	}
 }
+
 
 .filters .twitter-typeahead {
   display:block !important;

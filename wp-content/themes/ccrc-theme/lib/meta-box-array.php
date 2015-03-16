@@ -742,5 +742,57 @@ array(
    //      )
 			// )
 		)
-	) 
+	),
+	array(
+		'id' => 'case-statistics',
+		'title' => 'Case statistics',
+		'slug' => 'case-statistics',
+		'pages' => array( 'page' ),
+		'context' => 'normal',
+		'priority' => 'high',
+		'fields' => array(
+			array(
+				'id' => 'figures-date',
+				'label' => 'Figures date',
+				'type' => 'text',
+				'desc' => 'Date up to which figures relate'
+			),
+			array(
+				'id' => 'completed-referrals',
+				'label' => 'Completed referrals',
+				'type' => 'text',
+				'desc' => 'Number of completed referrals'
+			),
+			array(
+				'id' => 'completed-referrals-ineligible',
+				'label' => 'Completed referrals inc. ineligible',
+				'type' => 'text',
+				'desc' => 'Number of completed referrals including ineligible cases'
+			),
+			array(
+				'id' => 'total-applications',
+				'label' => 'Total applications',
+				'type' => 'text',
+				'desc' => 'Total number of applications'
+			),
+			array(
+				'id' => 'cases-waiting',
+				'label' => 'Cases waiting',
+				'type' => 'text',
+				'desc' => 'Total number of cases waiting'
+			),
+			array(
+				'id' => 'cases-under-review',
+				'label' => 'Cases under review',
+				'type' => 'text',
+				'desc' => 'Total number of cases under review'
+			),
+			array(
+				'id' => 'heard-by-court-of-appeal',
+				'label' => 'Heard by Court of Appeal',
+				'type' => 'text',
+				'desc' => 'Cases heard by Court of Appeal'
+			),
+		)
+	), 
 );
