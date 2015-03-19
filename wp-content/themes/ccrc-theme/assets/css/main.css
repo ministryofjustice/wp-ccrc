@@ -7482,4 +7482,17 @@ ul.filter-links a.active {
   display: block;
   margin: .5em 0;
 }
+/* Child/sibling nav links */
+li.page_item {
+  margin-bottom: .5em;
+}
+li.page_item a {
+  display: inline-block;
+  color: #000000;
+  background: #bed9ed;
+  padding: 4px 8px;
+}
+img.attachment-large {
+  margin-bottom: 1em;
+}
 /*# sourceMappingURL=main.css.map */
