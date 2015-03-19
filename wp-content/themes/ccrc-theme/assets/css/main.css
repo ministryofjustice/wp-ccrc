@@ -7512,7 +7512,7 @@ li.page_item a {
 @media (min-width: 768px) {
   .col-sm-8 {
     clear: none;
-    maegin-top: 0;
+    margin-top: 0;
     padding-top: 0;
     border-top: none;
   }
