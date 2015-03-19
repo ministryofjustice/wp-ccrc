@@ -545,8 +545,28 @@ li.page_item {
 		}
 }
 
-img.attachment-large {
+.feat-img img.attachment-large {
 	margin-bottom: 1em;
+	width: 49.5%;
+	float: right;
+		@media (min-width: @screen-sm) {
+		width: 100%;
+		float: none;
+	}
+
+}
+
+.col-sm-8 {
+	clear: both;
+	margin-top: 1em;
+	padding-top: 1em;
+	border-top: 1px solid @thin-divider-clr;
+		@media (min-width: @screen-sm) {
+			clear: none;
+			maegin-top: 0;
+			padding-top: 0;
+			border-top: none;
+	}
 }
 
 
