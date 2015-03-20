@@ -514,15 +514,21 @@ margin: .5em 0;
 /* Child/sibling nav links */
 
 li.page_item {
-	//width: 100%;
-	//display: block;
-	
 	margin-bottom: .5em;
-	
+		a {
+			display: inline-block;
+			color: @light-text-clr;
+			background: @brand-primary;
+			padding: 4px 8px;
+		}
+}
+
+li.page_item.current_page_item {
+	margin-bottom: .5em;
 		a {
 			display: inline-block;
 			color: @dark-text-clr;
-			background: #bed9ed;
+			background: @brand-secondary;
 			padding: 4px 8px;
 		}
 }
