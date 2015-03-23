@@ -18,7 +18,7 @@ function create_offence() {
 		array(
 			'label' => __( 'Offence' ),
 			'rewrite' => array( 'slug' => 'offence' ),
-			'hierarchical' => true,
+			'hierarchical' => false,
 		)
 	);
 }
