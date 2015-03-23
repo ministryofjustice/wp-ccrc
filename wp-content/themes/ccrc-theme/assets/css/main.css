@@ -6984,6 +6984,9 @@ figure.alignnone {
   margin-top: 1em;
   color: #ffffff;
 }
+.content-info #footer-links {
+  margin: 0 0 2em 0;
+}
 .content-info #footer-links ul {
   display: block;
   width: 100%;
