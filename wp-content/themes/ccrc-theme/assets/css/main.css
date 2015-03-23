@@ -7265,28 +7265,28 @@ ul.filter-links a.active {
   border-bottom: 5px solid #006685;
   padding-bottom: 12px;
 }
-.main .stats ul {
+.main .statistics ul {
   list-style: none;
   margin-left: 0;
   margin: 1em 0 2em 0 ;
 }
-.main .stats ul li {
+.main .statistics ul li {
   margin: 0 0 0 0;
   font-size: .95em;
   padding: 6px 0 6px 0;
 }
-.main .stats ul li:nth-child(odd) {
+.main .statistics ul li:nth-child(odd) {
   background: #fafcfe;
 }
-.main .stats ul li span {
+.main .statistics ul li span {
   min-width: 180px;
   display: inline-block;
 }
-.main .stats ul span {
+.main .statistics ul span {
   font-weight: 500;
   margin-right: 3px;
 }
-.main .stats p.sub {
+.main .statistics p.sub {
   font-size: .85em!important;
 }
 .filters .twitter-typeahead {

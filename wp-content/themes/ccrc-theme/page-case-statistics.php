@@ -26,7 +26,7 @@ Template Name: Case statistics
 
   		<?php the_content() ?>
 			
-			<div class="stats">
+			<div class="statistics">
 
 				<h2>Figures to <?php echo get_post_meta( $post->ID, "figures-date", true ); ?></h2>
 
