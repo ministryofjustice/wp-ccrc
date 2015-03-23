@@ -1,7 +1,7 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
     <div class="page-header">
-      <h1 class="entry-title"><?php the_title(); ?></h1>
+      
       </div>
   </header>
 
@@ -9,35 +9,8 @@
 
     <div class="col-sm-4">
 
-        <div class="post-meta">
-          <time class="published" datetime="<?php echo get_the_time('c'); ?>"><?php echo get_the_date(); ?></time>
-        </div>
-
-        <div class="download-report">
-        
-          <?php $fname = get_post_meta(get_the_ID(),'report-upload',true);  ?>
-
-          <a class="" href="<?php echo $fname; ?>">View/download report (PDF, 
-                <?php 
-
-                   //global $post;
-
-                   $post_id = get_the_ID();
-
-                  $myfile = filesize( get_attached_file( 68 ) ); 
-
-                  $docsize = size_format($myfile);
-
-                  echo $docsize;
-
-                  //echo $post_id;
-                  
-                  ?>
-              )
-          </a>
-            <!--Filesize need to be made dynamic -->
-       </div>
-
+<!-- <h3><?= get_post_meta( $post->ID, "case-name", true ); ?></h3> -->
+<h1 class="entry-title"><?php the_title(); ?></h1>
     </div>
 
     <div class="col-sm-8">
@@ -45,6 +18,22 @@
       <div class="entry-content">
 
           <?php the_content(); ?>
+
+                            <?php
+                  $terms = get_the_terms($post->ID, 'offence');                             
+                  if ($terms && !is_wp_error($terms)):                   
+                    $offences = array();                  
+                    foreach ( $terms as $term ) {
+                      $offences[] = $term->name;
+                    }                             
+                  ?>                  
+                  <p><strong>Offence:</strong> <?= join( "; ", $offences ) ?></p>                  
+                  <?php endif; ?>
+
+          <p><strong>Reference: </strong><?php echo get_post_meta( $post->ID, "case-reference", true ); ?></p>
+          <p><strong>Appeal outcome:</strong> <?php echo get_post_meta( $post->ID, "case-appeal-outcome", true ); ?></p>
+          <p><strong>Referred to court:</strong> <?php echo date("d/m/Y", strtotime(get_post_meta( $post->ID, "case-court-date", true ))); ?></p>
+          <p><strong>Appeal outcome date:</strong> <?php echo date("d/m/Y", strtotime(get_post_meta( $post->ID, "case-appeal-date", true ))); ?></p>
 
       </div>
 

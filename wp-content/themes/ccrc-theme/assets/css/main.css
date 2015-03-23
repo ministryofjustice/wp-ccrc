@@ -7517,4 +7517,7 @@ li.page_item.current_page_item a {
     border-top: none;
   }
 }
+.single-case h1 {
+  margin-top: 0;
+}
 /*# sourceMappingURL=main.css.map */
