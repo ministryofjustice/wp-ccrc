@@ -168,9 +168,9 @@ Template Name: Referred cases archive
             );
 					} else {
             $sort = array(
-              'order' => 'DESC',
-              'orderby' => 'meta_value_num',
-              'meta_key' => 'case-appeal-date',
+              'order' => 'ASC',
+              'orderby' => 'meta_value',
+              'meta_key' => 'case-name',
             );
           }
 					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
