@@ -7265,6 +7265,40 @@ ul.filter-links a.active {
   border-bottom: 5px solid #006685;
   padding-bottom: 12px;
 }
+.filters ul,
+.stats ul {
+  list-style: none;
+  margin-left: 0;
+  margin: 1em 0 2em 0 ;
+}
+.filters ul li,
+.stats ul li {
+  margin: 0 0 0 0;
+  font-size: .95em;
+  padding: 6px 0 6px 0;
+}
+.filters ul li:nth-child(odd),
+.stats ul li:nth-child(odd) {
+  background: #fafcfe;
+}
+.filters ul li span,
+.stats ul li span {
+  min-width: 180px;
+  display: inline-block;
+}
+.filters ul span,
+.stats ul span {
+  font-weight: 500;
+  margin-right: 3px;
+}
+.filters p.sub,
+.stats p.sub {
+  font-size: .85em!important;
+}
+.filters ul,
+.stats ul {
+  margin-bottom: 0;
+}
 .main .statistics ul {
   list-style: none;
   margin-left: 0;
