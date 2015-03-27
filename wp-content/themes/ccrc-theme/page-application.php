@@ -31,13 +31,13 @@ Template Name: Making an application
 					<span>1</span> <h2><?php echo get_post_meta( $post->ID, "first-option-title", true ); ?></h2><br><p><?php echo get_post_meta( $post->ID, "first-option-text", true ); ?> </p>
 				</div></a>
 				<a href="<?php echo get_permalink( get_post_meta( $post->ID, "second-option-link", true )); ?>"><div class="process-2">
-					<span>2</span> <h2><?php echo get_post_meta( $post->ID, "first-option-title", true ); ?></h2><br><p><?php echo get_post_meta( $post->ID, "second-option-text", true ); ?> </p>
+					<span>2</span> <h2><?php echo get_post_meta( $post->ID, "second-option-title", true ); ?></h2><br><p><?php echo get_post_meta( $post->ID, "second-option-text", true ); ?> </p>
 				</div></a>
 				<a href="<?php echo get_permalink( get_post_meta( $post->ID, "third-option-link", true )); ?>"><div class="process-3">
-					<span>3</span> <h2><?php echo get_post_meta( $post->ID, "second-option-title", true ); ?></h2><br><p><?php echo get_post_meta( $post->ID, "third-option-text", true ); ?></p>
+					<span>3</span> <h2><?php echo get_post_meta( $post->ID, "third-option-title", true ); ?></h2><br><p><?php echo get_post_meta( $post->ID, "third-option-text", true ); ?></p>
 				</div></a>
 				<a href="<?php echo get_permalink( get_post_meta( $post->ID, "fourth-option-link", true )); ?>"><div class="process-4">
-					<span>4</span> <h2><?php echo get_post_meta( $post->ID, "second-option-title", true ); ?></h2><br><p><?php echo get_post_meta( $post->ID, "fourth-option-text", true ); ?></p>
+					<span>4</span> <h2><?php echo get_post_meta( $post->ID, "fourth-option-title", true ); ?></h2><br><p><?php echo get_post_meta( $post->ID, "fourth-option-text", true ); ?></p>
 				</div></a>
 			</div>
 
