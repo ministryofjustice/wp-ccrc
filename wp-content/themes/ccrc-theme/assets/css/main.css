@@ -7555,6 +7555,9 @@ li.page_item.current_page_item a {
   margin-bottom: 1.5em;
   list-style: none;
 }
+.documents .document-list li h4 {
+  font-weight: normal;
+}
 .meta {
   font-size: .75em;
   color: #aaaaaa;

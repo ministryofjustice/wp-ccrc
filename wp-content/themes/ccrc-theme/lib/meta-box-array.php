@@ -797,8 +797,33 @@ array(
 	),
 	array(
 		'id' => 'policy-publications',
-		'title' => 'Corporate publications',
+		'title' => 'Policy publications',
 		'slug' => 'policy-publications',
+		'pages' => array( 'page' ),
+		'context' => 'normal',
+		'priority' => 'high',
+		'fields' => array(
+			array(
+			  'id'          => 'document-upload',
+			  'label'       => 'Document upload',
+			  //'desc'        => 'Upload PDFs etc here',
+			  'std'         => '',
+			  'type'        => 'list-item',
+			  'section'     => 'academic_perfomance',
+			  'settings'    => array( 
+			    array(
+			      'id'          => 'upload-pdf',
+			      'label'       => 'Upload PDF',
+			      'type'        => 'upload',
+			    )
+			  )
+			)
+		)
+	), 
+	array(
+		'id' => 'corporate-publications',
+		'title' => 'Corporate publications',
+		'slug' => 'corporate-publications',
 		'pages' => array( 'page' ),
 		'context' => 'normal',
 		'priority' => 'high',
