@@ -845,4 +845,29 @@ array(
 			)
 		)
 	), 
+	array(
+		'id' => 'application-guidance',
+		'title' => 'Application guidance',
+		'slug' => 'application-guidance',
+		'pages' => array( 'page' ),
+		'context' => 'normal',
+		'priority' => 'high',
+		'fields' => array(
+			array(
+			  'id'          => 'document-upload',
+			  'label'       => 'Document upload',
+			  //'desc'        => 'Upload PDFs etc here',
+			  'std'         => '',
+			  'type'        => 'list-item',
+			  'section'     => 'academic_perfomance',
+			  'settings'    => array( 
+			    array(
+			      'id'          => 'upload-pdf',
+			      'label'       => 'Upload PDF',
+			      'type'        => 'upload',
+			    )
+			  )
+			)
+		)
+	), 
 );
