@@ -39,7 +39,7 @@ Template Name: Documents
 
 				    <?php foreach ($repeatable_fields as $x) {
 
-				        echo '<li><h4><a href="' . $x['upload-pdf'] . '">' . $x['title'] . '</a> <span class="meta">';
+				        echo '<li><h4><a href="' . $x['upload-pdf'] . '">' . $x['title'] . '</a> <span class="meta">PDF, ';
 
 				        $attachment_id = get_attachment_id_from_src($x['upload-pdf']);
 
