@@ -7547,6 +7547,16 @@ li.page_item.current_page_item a {
     border-top: none;
   }
 }
+/* Document lists */
+.documents .document-list li {
+  margin-bottom: 1.5em;
+  list-style: none;
+}
+.meta {
+  font-size: .75em;
+  color: #aaaaaa;
+  font-weight: normal;
+}
 .single-case h1 {
   margin-top: 0;
 }

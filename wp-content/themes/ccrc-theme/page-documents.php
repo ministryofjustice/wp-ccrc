@@ -32,9 +32,24 @@ Template Name: Documents
 			<div class="documents">
 
 				<ul class="document-list">
-				<?php $repeatable_fields = get_post_meta($post->ID, 'document-upload', true); ?>
+				<?php
+
+				 $repeatable_fields = get_post_meta($post->ID, 'document-upload', true); 
+				?>
+
 				    <?php foreach ($repeatable_fields as $x) {
-				        echo '<h3><a href="' . $x['upload-pdf'] . '">' . $x['title'] . '</a> <span class="sub">(pdf)</span></h3>'; 
+
+				        echo '<li><h4><a href="' . $x['upload-pdf'] . '">' . $x['title'] . '</a> <span class="meta">';
+
+				        $attachment_id = get_attachment_id_from_src($x['upload-pdf']);
+
+	                  	$myfile = filesize( get_attached_file( $attachment_id ) ); 
+
+	                  	$docsize = size_format($myfile);
+
+	                  	echo $docsize;
+
+				        echo '</span></h4></li>'; 
 				    } ?>
 				</ul>
 

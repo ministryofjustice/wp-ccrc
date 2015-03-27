@@ -51,3 +51,17 @@ function modify_date_picker_date_format($format, $field_id) {
   return 'yy-mm-dd';
 }
 add_filter('ot_type_date_picker_date_format', 'modify_date_picker_date_format', 10, 2);
+
+
+function get_attachment_id_from_src ($src) {
+  global $wpdb;
+  $reg = "/-[0-9]+x[0-9]+?.(jpg|jpeg|png|gif)$/i";
+  $src1 = preg_replace($reg,'',$src);
+  if($src1 != $src){
+      $ext = pathinfo($src, PATHINFO_EXTENSION);
+      $src = $src1 . '.' .$ext;
+  }
+  $query = "SELECT ID FROM {$wpdb->posts} WHERE guid='$src'";
+  $id = $wpdb->get_var($query);
+  return $id;
+}
