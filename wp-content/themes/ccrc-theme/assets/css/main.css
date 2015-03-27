@@ -7548,6 +7548,9 @@ li.page_item.current_page_item a {
   }
 }
 /* Document lists */
+.documents {
+  margin-top: 2em;
+}
 .documents .document-list li {
   margin-bottom: 1.5em;
   list-style: none;
