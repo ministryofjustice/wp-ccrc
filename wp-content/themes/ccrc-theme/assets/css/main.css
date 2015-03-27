@@ -7379,6 +7379,7 @@ ul.filter-links a.active {
   background: #006685;
   padding: 3px;
   display: inline-block;
+  color: #ffffff;
 }
 .process div h2:hover {
   text-decoration: underline;
