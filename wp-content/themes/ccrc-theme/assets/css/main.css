@@ -7291,10 +7291,6 @@ ul.filter-links a.active {
   font-weight: 500;
   margin-right: 3px;
 }
-.filters p.sub,
-.stats p.sub {
-  font-size: .85em!important;
-}
 .filters ul,
 .stats ul {
   margin-bottom: 0;
@@ -7320,7 +7316,7 @@ ul.filter-links a.active {
   font-weight: 500;
   margin-right: 3px;
 }
-.main .statistics p.sub {
+.sub {
   font-size: .85em!important;
 }
 .filters .twitter-typeahead {
