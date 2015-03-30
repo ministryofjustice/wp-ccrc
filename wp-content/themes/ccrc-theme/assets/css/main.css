@@ -7079,6 +7079,9 @@ figure.alignnone {
 #footer-about p {
   max-width: 75%;
 }
+.intro {
+  margin-bottom: 1em;
+}
 #news-banner {
   display: block;
   margin-bottom: 2em;
