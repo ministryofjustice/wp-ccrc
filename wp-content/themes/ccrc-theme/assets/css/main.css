@@ -7267,54 +7267,7 @@ ul.filter-links a.active {
 }
 .filters ul,
 .stats ul {
-  list-style: none;
-  margin-left: 0;
-  margin: 1em 0 2em 0 ;
-}
-.filters ul li,
-.stats ul li {
-  margin: 0 0 0 0;
-  font-size: .95em;
-  padding: 6px 0 6px 0;
-}
-.filters ul li:nth-child(odd),
-.stats ul li:nth-child(odd) {
-  background: #fafcfe;
-}
-.filters ul li span,
-.stats ul li span {
-  min-width: 180px;
-  display: inline-block;
-}
-.filters ul span,
-.stats ul span {
-  font-weight: 500;
-  margin-right: 3px;
-}
-.filters ul,
-.stats ul {
   margin-bottom: 0;
-}
-.main .statistics ul {
-  list-style: none;
-  margin-left: 0;
-  margin: 1em 0 2em 0 ;
-}
-.main .statistics ul li {
-  margin: 0 0 0 0;
-  font-size: .95em;
-  padding: 6px 0 6px 0;
-}
-.main .statistics ul li:nth-child(odd) {
-  background: #fafcfe;
-}
-.main .statistics ul li span {
-  min-width: 180px;
-  display: inline-block;
-}
-.main .statistics ul span {
-  font-weight: 500;
-  margin-right: 3px;
 }
 .sub {
   font-size: .85em!important;
