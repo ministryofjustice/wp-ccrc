@@ -6780,13 +6780,23 @@ figure.alignnone {
 }
 /* - - - - - - Logo - - - - - - */
 #branding {
-  margin: 2em 0 1em 0;
+  margin: 0em 0 1em 0;
   display: inline-block;
   width: 33%;
 }
 #branding svg {
   width: 100%;
   max-height: 78px;
+}
+@media only screen and (min-width: 480px) {
+  #branding {
+    margin: 1em 0 1em 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #branding {
+    margin: 2em 0 1em 0;
+  }
 }
 /* - - - - - - Navigation - - - - - - */
 .nav:before,
@@ -6795,6 +6805,14 @@ figure.alignnone {
 }
 .navbar {
   margin-bottom: .5em;
+}
+.container > .navbar-header {
+  margin-top: -40px;
+}
+@media only screen and (min-width: 768px) {
+  .container > .navbar-header {
+    margin-top: -20px;
+  }
 }
 .navbar-header {
   margin-top: .5em;
@@ -6991,13 +7009,7 @@ figure.alignnone {
   display: block;
   width: 100%;
   overflow: hidden;
-  border-top: 1px solid #ffffff;
   padding: 12px 0 0 0;
-}
-@media (min-width: 768px) {
-  .content-info #footer-links ul {
-    border-top: 0;
-  }
 }
 .content-info #footer-links ul li {
   display: inline-block;
@@ -7059,8 +7071,10 @@ figure.alignnone {
   font-size: .85em;
   margin: 24px 0 0 0;
 }
-#footer-contact {
-  border-left: 1px solid #ffffff;
+@media (min-width: 768px) {
+  #footer-contact {
+    border-left: 1px solid #ffffff;
+  }
 }
 #footer-about p {
   max-width: 75%;
@@ -7068,7 +7082,7 @@ figure.alignnone {
 #news-banner {
   display: block;
   margin-bottom: 2em;
-  height: 153px;
+  height: 212px;
   background-image: url("../img/home-banner.jpg");
   -webkit-background-size: cover;
           background-size: cover;
@@ -7085,13 +7099,13 @@ figure.alignnone {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   background-color: #006685;
   background-color: rgba(0, 102, 133, 0.9);
   padding: 15px;
   color: #ffffff;
 }
-@media (min-width: 991px) {
+@media (min-width: 768px) {
   #news-banner .news-banner-text {
     width: 54%;
     height: auto;
@@ -7290,9 +7304,11 @@ ul.filter-links a.active {
 }
 .case-details table {
   margin-top: 1em;
+  border: 0!important;
 }
 .case-details table tr td {
   padding: 0 2em 1em 0;
+  border: 0;
 }
 .making-application h1 {
   margin: 0 0 .5em 0;
