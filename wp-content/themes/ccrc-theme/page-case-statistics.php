@@ -26,21 +26,19 @@ Template Name: Case statistics
 
   		<?php the_content() ?>
 			
-			<div class="statistics">
+			<!--<div class="statistics">
 
-				<h2>Figures to <?php echo get_post_meta( $post->ID, "figures-date", true ); ?></h2>
-
-					<ul>
+					 <ul>
 						<li><span>Completed:</span> <?php echo get_post_meta( $post->ID, "completed-referrals", true ); ?> referrals (<?php echo get_post_meta( $post->ID, "completed-referrals-ineligible", true ); ?> incl. ineligible)</li>
 						<li><span>Total applications*:</span> <?php echo get_post_meta( $post->ID, "total-applications", true ); ?></li>
 						<li><span>Cases waiting:</span>	<?php echo get_post_meta( $post->ID, "cases-waiting", true ); ?></li>
 						<li><span>Cases under review:</span> <?php echo get_post_meta( $post->ID, "completed-referrals", true ); ?></li>
 						
 						<li><span>Heard by Court of Appeal:</span> <?php echo get_post_meta( $post->ID, "heard-by-court-of-appeal", true ); ?></li>
-					</ul>
+					</ul> -->
 
-					<p class="sub">* Total applications includes 279 cases transferred from the Home Office when the Commission was set up in 1997.</p>
-			</div>
+					<!-- <p class="sub">* Total applications includes 279 cases transferred from the Home Office when the Commission was set up in 1997.</p> 
+			</div>-->
 
   		</div>
 	</div>

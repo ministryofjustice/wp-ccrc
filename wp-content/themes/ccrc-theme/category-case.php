@@ -56,7 +56,7 @@ Template Name: Referred cases archive
 					</form>
 			</div>
 
-			<div class="stats">
+<!-- 			<div class="stats">
 				<h2>Case Statistics</h2>
 				<p>Figures to 31 October 2014</p>
           <ul>
@@ -67,7 +67,7 @@ Template Name: Referred cases archive
 
             <li><span>Heard by Court of Appeal:</span> <?php echo get_post_meta( 157, "heard-by-court-of-appeal", true ); ?></li>
           </ul>
-			</div>
+			</div> -->
 		</div>
 
 		<div class="col-sm-8 max-col">
