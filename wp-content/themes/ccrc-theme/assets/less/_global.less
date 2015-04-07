@@ -126,8 +126,9 @@ figure {
 	margin: .5em 0;display: inline-block;
 }
 
-.btn img {
-	width: auto;
+.btn svg {
+	width: 29px;
+	height: 27px;
 }
 
 .pagination {
@@ -214,4 +215,14 @@ figure {
 			h4 {
 				margin-top: 0;
 			}
+}
+
+/*  Mixins  */
+
+.top-margin-sm {
+	margin-top: 1em;
+		@media (min-width: @screen-sm) {
+		margin-top: 0;
+		}
+
 }
