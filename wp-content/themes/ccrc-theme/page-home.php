@@ -34,7 +34,6 @@ Template Name: Homepage
 					// Get meta value containing array of entries
 					$latest_news_args = array(
 						'post_type' => 'post',
-						'category' => 'press-release',
 						'posts_per_page' => 3
 					);
 					$latest_news_query = new WP_Query( $latest_news_args );
