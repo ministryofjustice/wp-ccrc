@@ -25,19 +25,33 @@ function custom_theme_options() {
 	 * Custom settings array that will eventually be 
 	 * passes to the OptionTree Settings API Class.
 	 */
-	
 
-
-
-
-
-
-
-
-
+	// Main settings array
 	$custom_settings = array(
-		'sections' => $homepage_sections,
-		'settings' => $homepage_button_settings
+		'sections' => array(
+			array(
+				'id' => 'footer',
+				'title' => 'Footer'
+			),
+		),
+		'settings' => array_merge(
+				array(
+			array(
+				'id' => 'footer-text',
+				'label' => 'Footer text',
+				//'desc' => 'Descriptive text found in the footer',
+				'type' => 'textarea',
+				'section' => 'footer'
+			),
+			array(
+				'id' => 'footer-address',
+				'label' => 'Footer address',
+				//'desc' => 'Address text found in the footer',
+				'type' => 'textarea',
+				'section' => 'footer'
+			)
+				)
+		)
 	);
 
 	/* allow settings to be filtered before saving */
