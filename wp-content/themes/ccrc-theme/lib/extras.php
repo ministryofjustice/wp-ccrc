@@ -73,11 +73,3 @@ function wrap_embed_with_div($html, $url, $attr) {
 }
 add_filter('embed_oembed_html', __NAMESPACE__ . '\\wrap_embed_with_div', 10, 3);
 
-
-function embed_convert($matches) {
-  if(!empty(wp_oembed_get($matches[0]))) {
-    return '<div class="embed-responsive embed-responsive-16by9">' . wp_oembed_get($matches[0]) . '</div>';
-  } else {
-    return $matches[0];
-  }
-}
