@@ -87,6 +87,7 @@ Template Name: Homepage
   					<li class="ql2"><a href="<?php echo get_permalink( get_post_meta( $post->ID, "quick-link-2-page", true )); ?>"><?php echo get_post_meta( $post->ID, "quick-link-2", true ); ?> ></a></li>
   					<li class="ql3"><a href="<?php echo get_permalink( get_post_meta( $post->ID, "quick-link-3-page", true )); ?>"><?php echo get_post_meta( $post->ID, "quick-link-3", true ); ?> ></a></li>
   					<li class="ql4"><a href="<?php echo get_permalink( get_post_meta( $post->ID, "quick-link-4-page", true )); ?>"><?php echo get_post_meta( $post->ID, "quick-link-4", true ); ?> ></a></li>
+  					<li class="ql5"><a href="<?php echo get_permalink( get_post_meta( $post->ID, "quick-link-5-page", true )); ?>"><?php echo get_post_meta( $post->ID, "quick-link-5", true ); ?> ></a></li>
   				</ul>
   			</div>
 

@@ -7179,6 +7179,9 @@ figure.alignnone {
 .quick-links ul li.ql4 {
   background: #006685 url('../img/bars-medium.png') no-repeat 10px 50%;
 }
+.quick-links ul li.ql5 {
+  background: #006685 url('../img/job-medium1.png') no-repeat 10px 50%;
+}
 .main .row .max-col img {
   width: auto;
 }

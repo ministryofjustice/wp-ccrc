@@ -99,6 +99,18 @@ $meta_boxes = array(
 				'desc' => 'Please select the destination page for the fourth link'
 			),
 			array(
+				'id' => 'quick-link-5',
+				'label' => 'Quick link 5 text',
+				'type' => 'text',
+				'desc' => 'Text to display for the fifth quick link'
+			),
+			array(
+				'id' => 'quick-link-5-page',
+				'label' => 'Quick link 5 destination',
+				'type' => 'page-select',
+				'desc' => 'Please select the destination page for the fifth link'
+			),
+			array(
 				'id' => 'sidebar-text-tab',
 				'label' => 'Sidebar text',
 				'type' => 'tab'
