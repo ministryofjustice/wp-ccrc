@@ -193,7 +193,7 @@ $meta_boxes = array(
 				'desc' => 'The destination for the fourth related link'
 			)
 		)
-	), 
+	),
 	array(
 		'id' => 'making-application-metaboxes',
 		'title' => 'Making an Application Options',
@@ -276,7 +276,7 @@ $meta_boxes = array(
 			),
 
 		)
-	), 
+	),
 	array(
 		'id' => 'related-items-how-it-works',
 		'title' => 'Related items',
@@ -373,7 +373,7 @@ $meta_boxes = array(
 				'desc' => 'URL for the second related internet link'
 			),
 		)
-	), 
+	),
 	array(
 		'id' => 'related-items-can-i-apply',
 		'title' => 'Related items',
@@ -573,7 +573,7 @@ $meta_boxes = array(
 				'desc' => 'URL for the second related internet link'
 			),
 		)
-	), 
+	),
 	array(
 		'id' => 'related-items-after-i-apply',
 		'title' => 'Related items',
@@ -670,7 +670,7 @@ $meta_boxes = array(
 				'desc' => 'URL for the second related internet link'
 			),
 		)
-	),  
+	),
 array(
 		'id' => 'case-details',
 		'title' => 'Case details',
@@ -707,7 +707,7 @@ array(
 				'label' => 'Appeal outcome',
 				'type' => 'select',
 				'desc' => 'The appeal outcome',
-				'choices'     => array( 
+				'choices'     => array(
           array(
             'value'       => '',
             'label'       => __( '-- Choose One --', 'roots' ),
@@ -735,7 +735,7 @@ array(
 			// 	'label' => 'Case judgement',
 			// 	'type' => 'select',
 			// 	'desc' => 'The judgement',
-			// 					'choices'     => array( 
+			// 					'choices'     => array(
    //        array(
    //          'value'       => '',
    //          'label'       => __( '-- Choose One --', 'roots' ),
@@ -822,7 +822,7 @@ array(
 			  'std'         => '',
 			  'type'        => 'list-item',
 			  'section'     => 'academic_perfomance',
-			  'settings'    => array( 
+			  'settings'    => array(
 			    array(
 			      'id'          => 'upload-pdf',
 			      'label'       => 'Upload PDF',
@@ -831,7 +831,32 @@ array(
 			  )
 			)
 		)
-	), 
+	),
+  array(
+    'id' => 'ccrc-casework-policies',
+    'title' => 'ccrc-casework-policies',
+    'slug' => 'ccrc-casework-policies',
+    'pages' => array( 'page' ),
+    'context' => 'normal',
+    'priority' => 'high',
+    'fields' => array(
+      array(
+        'id'          => 'document-upload',
+        'label'       => 'Document upload',
+        //'desc'        => 'Upload PDFs etc here',
+        'std'         => '',
+        'type'        => 'list-item',
+        'section'     => 'academic_perfomance',
+        'settings'    => array(
+          array(
+            'id'          => 'upload-pdf',
+            'label'       => 'Upload PDF',
+            'type'        => 'upload',
+          )
+        )
+      )
+    )
+  ),
 	array(
 		'id' => 'corporate-publications',
 		'title' => 'Corporate publications',
@@ -847,7 +872,7 @@ array(
 			  'std'         => '',
 			  'type'        => 'list-item',
 			  'section'     => 'academic_perfomance',
-			  'settings'    => array( 
+			  'settings'    => array(
 			    array(
 			      'id'          => 'upload-pdf',
 			      'label'       => 'Upload PDF',
@@ -856,7 +881,7 @@ array(
 			  )
 			)
 		)
-	), 
+	),
 	array(
 		'id' => 'application-guidance',
 		'title' => 'Application guidance',
@@ -872,7 +897,7 @@ array(
 			  'std'         => '',
 			  'type'        => 'list-item',
 			  'section'     => 'academic_perfomance',
-			  'settings'    => array( 
+			  'settings'    => array(
 			    array(
 			      'id'          => 'upload-pdf',
 			      'label'       => 'Upload PDF',
@@ -881,5 +906,5 @@ array(
 			  )
 			)
 		)
-	), 
+	),
 );
