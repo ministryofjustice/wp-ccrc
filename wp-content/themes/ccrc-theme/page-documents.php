@@ -8,7 +8,7 @@ Template Name: Documents
 	 <div class="page-header">
 	 	<h1><?php the_title(); ?></h1>
 	 </div>
-	
+
   	<div class="row">
   		<div class="col-sm-4 min-col">
 
@@ -25,31 +25,31 @@ Template Name: Documents
 
   		<div class="col-sm-8 max-col">
 
-		
+
 
   		<?php the_content() ?>
-			
+
 			<div class="documents">
 
 				<ul class="document-list">
 				<?php
 
-				 $repeatable_fields = get_post_meta($post->ID, 'document-upload', true); 
+				 $repeatable_fields = get_post_meta($post->ID, 'document-upload', true);
 				?>
 
 				    <?php foreach ($repeatable_fields as $x) {
 
-				        echo '<li><h4><a href="' . $x['upload-pdf'] . '">' . $x['title'] . '</a> <span class="meta">PDF, ';
+				        echo '<li><h4><a target="_blank" href="' . $x['upload-pdf'] . '">' . $x['title'] . '</a> <span class="meta">PDF, ';
 
 				        $attachment_id = get_attachment_id_from_src($x['upload-pdf']);
 
-	                  	$myfile = filesize( get_attached_file( $attachment_id ) ); 
+	                  	$myfile = filesize( get_attached_file( $attachment_id ) );
 
 	                  	$docsize = size_format($myfile);
 
 	                  	echo $docsize;
 
-				        echo '</span></h4></li>'; 
+				        echo '</span></h4></li>';
 				    } ?>
 				</ul>
 
