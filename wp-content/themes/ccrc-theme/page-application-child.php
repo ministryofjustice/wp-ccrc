@@ -4,8 +4,7 @@ Template Name: Application child pages
 */
 ?>
 <?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part( 'header'); ?>
-	
+
   	<div class="row making-application">
   		<div class="col-sm-4 min-col">
 
@@ -14,7 +13,7 @@ Template Name: Application child pages
 				echo '<div class="page-img-wrapper">';
 				the_post_thumbnail('large');
 				echo '</div>';
-				  if(!empty($get_description)){//If description is not empty show the div
+				  if(!empty($get_description)){ // If description is not empty show the div
 				  echo '<div class="img-caption">' . get_post(get_post_thumbnail_id())->post_excerpt . '</div>';
 				  }
 			?>
@@ -48,35 +47,21 @@ Template Name: Application child pages
 
 		<?php
 
-			if ( is_page( 'how-to-apply' )) { 
+			if ( is_page( 'how-to-apply' )) {
 
 			echo '<div class="application-form"><a class="" href="';
   			echo get_post_meta( $post->ID, "application-form", true );
-  	        echo '">Download application form</a> <span class="file-size">PDF, 502kb</span></div>'; 
+  	        echo '">Download application form</a> <span class="file-size">PDF, 502kb</span></div>';
 
 				}
 			else {
 
 			}
-		
+
 		?>
 
-		<?php
-
-		// if (is_page('how-to-apply')){
-
-		// echo '<div class="application-form"><a class="" href="'
-  //       echo get_post_meta( $post->ID, "application-form", true );
-  //       echo '">Download application form</a> <span class="file-size">PDF, 502kb</span></div>'
-
-  //      } else {
-  //      	echo 'la'
-  //      }
-
-       ?>
-
   		<?php the_content() ?>
-			
+
 
   		</div>
 	</div>
