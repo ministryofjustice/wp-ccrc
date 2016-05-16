@@ -4,8 +4,7 @@ Template Name: Making an application
 */
 ?>
 <?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part( 'header'); ?>
-	
+
   	<div class="row making-application">
   		<div class="col-sm-4 min-col">
 
@@ -14,7 +13,7 @@ Template Name: Making an application
 				echo '<div class="page-img-wrapper">';
 				the_post_thumbnail('large');
 				echo '</div>';
-				  if(!empty($get_description)){//If description is not empty show the div
+				  if(!empty($get_description)){ // If description is not empty show the div
 				  echo '<div class="img-caption">' . get_post(get_post_thumbnail_id())->post_excerpt . '</div>';
 				  }
 			?>
@@ -25,7 +24,7 @@ Template Name: Making an application
 		<h1><?php the_title(); ?></h1>
 
   		<?php the_content() ?>
-			
+
 			<div class="process">
 				<a href="<?php echo get_permalink( get_post_meta( $post->ID, "first-option-link", true )); ?>"><div class="process-1">
 					<span>1</span> <h2><?php echo get_post_meta( $post->ID, "first-option-title", true ); ?></h2><br><p><?php echo get_post_meta( $post->ID, "first-option-text", true ); ?> </p>

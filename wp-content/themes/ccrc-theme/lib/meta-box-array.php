@@ -111,35 +111,6 @@ $meta_boxes = array(
 				'desc' => 'Please select the destination page for the fifth link'
 			),
 			array(
-				'id' => 'sidebar-text-tab',
-				'label' => 'Sidebar text',
-				'type' => 'tab'
-			),
-			array(
-				'id' => 'sidebar-text-title',
-				'label' => 'Sidebar text title',
-				'type' => 'text',
-				'desc' => 'Sidebar title'
-			),
-			array(
-				'id' => 'sidebar-text-p1',
-				'label' => 'Sidebar text first para',
-				'type' => 'textarea-simple',
-				'desc' => 'First paragraph of sidebar body text'
-			),
-			array(
-				'id' => 'sidebar-text-p2',
-				'label' => 'Sidebar text second para',
-				'type' => 'textarea-simple',
-				'desc' => 'Second paragraph of sidebar body text'
-			),
-			array(
-				'id' => 'sidebar-link',
-				'label' => 'Sidebar link',
-				'type' => 'page-select',
-				'desc' => 'Link under sidebar text'
-			),
-			array(
 				'id' => 'related-links',
 				'label' => 'Related links',
 				'type' => 'tab'
@@ -729,81 +700,6 @@ array(
             'src'         => ''
           )
         )
-			),
-			// array(
-			// 	'id' => 'case-judgement',
-			// 	'label' => 'Case judgement',
-			// 	'type' => 'select',
-			// 	'desc' => 'The judgement',
-			// 					'choices'     => array(
-   //        array(
-   //          'value'       => '',
-   //          'label'       => __( '-- Choose One --', 'roots' ),
-   //          'src'         => ''
-   //        ),
-   //        array(
-   //          'value'       => 'Available',
-   //          'label'       => __( 'Available', 'roots' ),
-   //          'src'         => ''
-   //        ),
-   //        array(
-   //          'value'       => 'Not Available',
-   //          'label'       => __( 'Not Available', 'roots' ),
-   //          'src'         => ''
-   //        )
-   //      )
-			// )
-		)
-	),
-	array(
-		'id' => 'case-statistics',
-		'title' => 'Case statistics',
-		'slug' => 'case-statistics',
-		'pages' => array( 'page' ),
-		'context' => 'normal',
-		'priority' => 'high',
-		'fields' => array(
-			array(
-				'id' => 'figures-date',
-				'label' => 'Figures date',
-				'type' => 'text',
-				'desc' => 'Date up to which figures relate'
-			),
-			array(
-				'id' => 'completed-referrals',
-				'label' => 'Completed referrals',
-				'type' => 'text',
-				'desc' => 'Number of completed referrals'
-			),
-			array(
-				'id' => 'completed-referrals-ineligible',
-				'label' => 'Completed referrals inc. ineligible',
-				'type' => 'text',
-				'desc' => 'Number of completed referrals including ineligible cases'
-			),
-			array(
-				'id' => 'total-applications',
-				'label' => 'Total applications',
-				'type' => 'text',
-				'desc' => 'Total number of applications'
-			),
-			array(
-				'id' => 'cases-waiting',
-				'label' => 'Cases waiting',
-				'type' => 'text',
-				'desc' => 'Total number of cases waiting'
-			),
-			array(
-				'id' => 'cases-under-review',
-				'label' => 'Cases under review',
-				'type' => 'text',
-				'desc' => 'Total number of cases under review'
-			),
-			array(
-				'id' => 'heard-by-court-of-appeal',
-				'label' => 'Heard by Court of Appeal',
-				'type' => 'text',
-				'desc' => 'Cases heard by Court of Appeal'
 			),
 		)
 	),

@@ -4,7 +4,6 @@ Template Name: Documents
 */
 ?>
 <?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part( 'header'); ?>
 	 <div class="page-header">
 	 	<h1><?php the_title(); ?></h1>
 	 </div>
@@ -38,6 +37,8 @@ Template Name: Documents
 				?>
 
 				    <?php foreach ($repeatable_fields as $x) {
+
+                if (empty($x['upload-pdf'])) continue;
 
 				        echo '<li><h4><a target="_blank" href="' . $x['upload-pdf'] . '">' . $x['title'] . '</a> <span class="meta">PDF, ';
 
