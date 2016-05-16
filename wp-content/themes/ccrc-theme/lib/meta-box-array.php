@@ -111,35 +111,6 @@ $meta_boxes = array(
 				'desc' => 'Please select the destination page for the fifth link'
 			),
 			array(
-				'id' => 'sidebar-text-tab',
-				'label' => 'Sidebar text',
-				'type' => 'tab'
-			),
-			array(
-				'id' => 'sidebar-text-title',
-				'label' => 'Sidebar text title',
-				'type' => 'text',
-				'desc' => 'Sidebar title'
-			),
-			array(
-				'id' => 'sidebar-text-p1',
-				'label' => 'Sidebar text first para',
-				'type' => 'textarea-simple',
-				'desc' => 'First paragraph of sidebar body text'
-			),
-			array(
-				'id' => 'sidebar-text-p2',
-				'label' => 'Sidebar text second para',
-				'type' => 'textarea-simple',
-				'desc' => 'Second paragraph of sidebar body text'
-			),
-			array(
-				'id' => 'sidebar-link',
-				'label' => 'Sidebar link',
-				'type' => 'page-select',
-				'desc' => 'Link under sidebar text'
-			),
-			array(
 				'id' => 'related-links',
 				'label' => 'Related links',
 				'type' => 'tab'
