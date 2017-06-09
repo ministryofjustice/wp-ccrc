@@ -49,7 +49,8 @@
     "oscarotero/env": "^1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/google-analytics-dashboard-for-wp": "^5",
-    "ministryofjustice/wp-rewrite-media-to-s3": "^0.1.1"
+    "ministryofjustice/wp-rewrite-media-to-s3": "^0.1.1",
+    "wpackagist-plugin/option-tree": "^2.6"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"

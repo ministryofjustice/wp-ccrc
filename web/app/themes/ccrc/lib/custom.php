@@ -26,13 +26,10 @@ foreach ( $cpt_declarations as $cpt_declaration ) {
 load_template( trailingslashit( get_template_directory() ) . 'lib/meta-boxes.php' );
 
 /* Setup option tree */
-add_filter( 'ot_theme_mode', '__return_true' );
 add_filter( 'ot_show_pages', '__return_false' );
 add_filter( 'ot_show_new_layout', '__return_false' );
 add_filter( 'ot_use_theme_options', '__return_true' );
 add_filter( 'ot_header_version_text', '__return_null' );
-//load_template( trailingslashit( get_template_directory() ) . 'lib/theme-options.php' );
-require_once (trailingslashit( get_template_directory() ) . 'option-tree/ot-loader.php');
 
 /* Shortcode for headings with icons */
 
@@ -50,7 +47,7 @@ function heading_output( $atts, $content ) {
  */
 add_action('init', 'remove_editor_init');
 function remove_editor_init() {
-    // if post not set, just return 
+    // if post not set, just return
     // fix when post not set, throws PHP's undefined index warning
     if (isset($_GET['post'])) {
         $post_id = $_GET['post'];
