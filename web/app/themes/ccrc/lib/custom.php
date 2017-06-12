@@ -61,3 +61,12 @@ function remove_editor_init() {
         remove_post_type_support('page', 'editor');
     }
 }
+
+function get_offences_terms() {
+    $offences = get_terms('offence' , ['fields' => 'names']);
+    header('Content-Type: application/json');
+    echo json_encode($offences);
+    exit;
+}
+add_action('wp_ajax_get_offences_terms', 'get_offences_terms');
+add_action('wp_ajax_nopriv_get_offences_terms', 'get_offences_terms');
