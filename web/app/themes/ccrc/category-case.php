@@ -113,6 +113,8 @@ Template Name: Referred cases archive
         			'field'    => 'slug',
         			'terms'    => htmlspecialchars($offences_var),
           	));
+          } else {
+              $tax = array();
           }
 
           $appeal_outcome_var = get_query_var('appeal_outcome');
