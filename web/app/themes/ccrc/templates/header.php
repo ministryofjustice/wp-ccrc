@@ -1,5 +1,5 @@
-<header class="banner navbar navbar-default navbar-static-top" role="banner">
-  <div class="container">
+<header class="banner" role="banner">
+    <div class="container navbar-expand-md navbar navbar-default navbar-static-top flex-wrap">
 
 <div id="branding">
 <a href="<?php echo home_url(); ?>">

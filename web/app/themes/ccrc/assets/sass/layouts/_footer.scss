@@ -23,7 +23,7 @@
 			margin-top: 12px;
 			text-align: center;
 
-				@include media-breakpoint-up(xs) {(min-width: $screen-xs) {
+				@include media-breakpoint-up(xs) {
 					margin-top: 0;
 					width: 32%;
 					white-space: nowrap;

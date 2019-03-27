@@ -7,7 +7,7 @@
 	display:block;
 	margin-bottom: 2em;
 	height: 212px;
-	background-image: url("../img/banner-books.jpg");
+	background-image: url("../images/banner-books.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
@@ -90,26 +90,26 @@
 }
 
 	.quick-links ul li.ql1 {
-		background: $brand-primary url('../img/question-medium.png') no-repeat 10px 50%;
+		background: $brand-primary url('../images/question-medium.png') no-repeat 10px 50%;
 
 	}
 
 	.quick-links ul li.ql2 {
-		background: $brand-primary url('../img/scales-medium.png') no-repeat 10px 50%;
+		background: $brand-primary url('../images/scales-medium.png') no-repeat 10px 50%;
 
 	}
 
 	.quick-links ul li.ql3 {
-		background: $brand-primary url('../img/form-medium.png') no-repeat 10px 50%;
+		background: $brand-primary url('../images/form-medium.png') no-repeat 10px 50%;
 
 	}
 
 	.quick-links ul li.ql4 {
-		background: $brand-primary url('../img/bars-medium.png') no-repeat 10px 50%;
+		background: $brand-primary url('../images/bars-medium.png') no-repeat 10px 50%;
 
 	}
 	.quick-links ul li.ql5 {
-		background: $brand-primary url('../img/job-medium1.png') no-repeat 10px 50%;
+		background: $brand-primary url('../images/job-medium1.png') no-repeat 10px 50%;
 
 	}
 
@@ -405,21 +405,21 @@ ul.filter-links {
 }
 
 		.process div.process-1 {
-			background: #006685 url("../img/process-1.jpg") 100% 50% no-repeat;
+			background: #006685 url("../images/process-1.jpg") 100% 50% no-repeat;
 			background-size: 40%;
 		}
 
 		.process div.process-2 {
-			background: #006685 url("../img/process-2.jpg") 100% 50% no-repeat;
+			background: #006685 url("../images/process-2.jpg") 100% 50% no-repeat;
 			background-size: 40%;
 		}
 		.process div.process-3 {
-			background: #006685 url("../img/process-3.jpg") 100% 50% no-repeat;
+			background: #006685 url("../images/process-3.jpg") 100% 50% no-repeat;
 			background-size: 40%;
 		}
 
 		.process div.process-4 {
-			background: #006685 url("../img/process-4.jpg") 100% 50% no-repeat;
+			background: #006685 url("../images/process-4.jpg") 100% 50% no-repeat;
 			background-size: 40%;
 				&:after {
 					border:0;
@@ -451,47 +451,47 @@ ul.filter-links {
 /*  Heading icons */
 
 .exclaim {
-	background: url("../img/alert-large.gif") 0% 50% no-repeat;
+	background: url("../images/alert-large.gif") 0% 50% no-repeat;
 	padding: 1em 0 1em 3em;
 }
 
 .scales {
-	background: url("../img/decision-large.gif") 0% 50% no-repeat;
+	background: url("../images/decision-large.gif") 0% 50% no-repeat;
 	padding: 1em 0 1em 3em;
 }
 
 .map {
-	background: url("../img/map-large.gif") 0% 50% no-repeat;
+	background: url("../images/map-large.gif") 0% 50% no-repeat;
 	padding: 1em 0 1em 3em;
 }
 
 .evidence {
-	background: url("../img/stardoc-large.gif") 0% 50% no-repeat;
+	background: url("../images/stardoc-large.gif") 0% 50% no-repeat;
 	padding: 1em 0 1em 3em;
 }
 
 .check {
-	background: url("../img/check-large.gif") 0% 50% no-repeat;
+	background: url("../images/check-large.gif") 0% 50% no-repeat;
 	padding: 1em 0 1em 3em;
 }
 
 .time {
-	background: url("../img/time-large.gif") 0% 50% no-repeat;
+	background: url("../images/time-large.gif") 0% 50% no-repeat;
 	padding: 1em 0 1em 3em;
 }
 
 .review {
-	background: url("../img/review-large.gif") 0% 50% no-repeat;
+	background: url("../images/review-large.gif") 0% 50% no-repeat;
 	padding: 1em 0 1em 3em;
 }
 
 .view {
-	background: url("../img/view-large.gif") 0% 50% no-repeat;
+	background: url("../images/view-large.gif") 0% 50% no-repeat;
 	padding: 1em 0 1em 3em;
 }
 
 .response {
-	background: url("../img/response-large.gif") 0% 50% no-repeat;
+	background: url("../images/response-large.gif") 0% 50% no-repeat;
 	padding: 1em 0 1em 3em;
 }
 
@@ -500,7 +500,7 @@ ul.filter-links {
 .application-form {
 	margin: 1em 0 1.5em 0;
 	padding: 12px 15px 15px 5em;
-	background: lighten($brand-secondary, 12%) url('../img/report-icon.png') 15px 13px no-repeat;
+	background: lighten($brand-secondary, 12%) url('../images/report-icon.png') 15px 13px no-repeat;
 	width: 100%;
 
 		a {
@@ -578,7 +578,7 @@ li.page_item.current_page_item {
 }
 
 .meta {
-	@include post-date;
+	@extend .post-date;
 	font-weight: normal;
 }
 

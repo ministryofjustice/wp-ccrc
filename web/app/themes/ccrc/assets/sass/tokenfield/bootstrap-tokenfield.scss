@@ -23,40 +23,38 @@ $token-active-invalid-border: $token-background;
   $color-rgba: rgba(red($color), green($color), blue($color), .6);
   border-color: $color;
   outline: 0;
-  .box-shadow("inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #{$color-rgba}");
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px $color-rgba;
 }
 
 @mixin tokenfield-validation($border-color) {
   border-color: darken($border-color, 10%);
   $shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px lighten($border-color, 20%);
-  @mixin box-shadow($shadow),
+  @include box-shadow($shadow);
 }
 
 @mixin border-radius($border-radius) {
   -webkit-border-radius: $border-radius;
-     -moz-border-radius: $border-radius;
-          border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  border-radius: $border-radius;
+}
+
+@mixin keyframes( $animation ) {
+  @-webkit-keyframes $animation {
+    @content;
+  }
+  @-moz-keyframes $animation {
+    @content;
+  }
+  @-o-keyframes $animation {
+    @content;
+  }
+  @keyframes $animation {
+    @content;
+  }
 }
 
 // Blink animation for duplicate tokens
-
-$-webkit-keyframes blink {
-  0% {
-    border-color: #ededed;
-  }
-  100% {
-    border-color: #b94a48;
-  }
-}
-$-moz-keyframes blink {
-  0% {
-    border-color: #ededed;
-  }
-  100% {
-    border-color: #b94a48;
-  }
-}
-@keyframes blink {
+@include keyframes(blink) {
   0% {
     border-color: #ededed;
   }
@@ -69,8 +67,8 @@ $-moz-keyframes blink {
 
 .tokenfield {
   height: auto;
-  min-height: $input-height-base;
   padding-bottom: 0px;
+
   &.focus {
     @include tokenfield-focus();
   }
@@ -87,13 +85,16 @@ $-moz-keyframes blink {
     height: 22px;
     vertical-align: top;
     cursor: default;
+
     &:hover {
       border-color: $token-hover-border;
     }
+
     &.active {
       border-color: rgb(82, 168, 236);
       border-color: rgba(82, 168, 236, 0.8);
     }
+
     &.duplicate {
       border-color: $state-danger-border;
       @include animation-name(blink);
@@ -102,17 +103,20 @@ $-moz-keyframes blink {
       @include animation-timing-function(ease);
       @include animation-iteration-count(infinite);
     }
+
     &.invalid {
       background: none;
       border: 1px solid transparent;
       @include border-radius(0);
       border-bottom: 1px dotted $brand-danger;
+
       &.active {
         background: $token-background;
         border: 1px solid $token-active-invalid-border;
         @include border-radius(3px);
       }
     }
+
     .token-label {
       display: inline-block;
       overflow: hidden;
@@ -120,6 +124,7 @@ $-moz-keyframes blink {
       padding-left: 4px;
       vertical-align: top;
     }
+
     .close {
       font-family: Arial;
       display: inline-block;
@@ -145,6 +150,7 @@ $-moz-keyframes blink {
     margin-bottom: 6px;
     @include box-shadow(none);
   }
+
   .token-input:focus {
     border-color: transparent;
     outline: 0;
@@ -156,12 +162,15 @@ $-moz-keyframes blink {
   &.disabled {
     cursor: not-allowed;
     background-color: $gray-lighter;
+
     .token-input {
       cursor: not-allowed;
     }
+
     .token:hover {
       cursor: not-allowed;
       border-color: $token-border;
+
       .close {
         cursor: not-allowed;
         @include opacity(0.2);
@@ -175,9 +184,11 @@ $-moz-keyframes blink {
 .has-warning .tokenfield.focus {
   @include tokenfield-validation($state-warning-text);
 }
+
 .has-error .tokenfield.focus {
   @include tokenfield-validation($state-danger-text);
 }
+
 .has-success .tokenfield.focus {
   @include tokenfield-validation($state-success-text);
 }
@@ -189,11 +200,13 @@ $-moz-keyframes blink {
   min-height: 30px;
   padding-bottom: 0px;
 }
+
 .input-group-sm .token,
 .tokenfield.input-sm .token {
   height: 20px;
   margin-bottom: 4px;
 }
+
 .input-group-sm .token-input,
 .tokenfield.input-sm .token-input {
   height: 18px;
@@ -205,18 +218,22 @@ $-moz-keyframes blink {
   min-height: 45px;
   padding-bottom: 4px;
 }
+
 .input-group-lg .token,
 .tokenfield.input-lg .token {
   height: 25px;
 }
+
 .input-group-lg .token-label,
 .tokenfield.input-lg .token-label {
   line-height: 23px;
 }
+
 .input-group-lg .token .close,
 .tokenfield.input-lg .token .close {
   line-height: 1.3em;
 }
+
 .input-group-lg .token-input,
 .tokenfield.input-lg .token-input {
   height: 23px;
@@ -231,9 +248,11 @@ $-moz-keyframes blink {
   direction: rtl;
   text-align: right;
 }
+
 .tokenfield.rtl .token {
   margin: -1px 0 5px 5px;
 }
+
 .tokenfield.rtl .token .token-label {
   padding-left: 0px;
   padding-right: 4px;
