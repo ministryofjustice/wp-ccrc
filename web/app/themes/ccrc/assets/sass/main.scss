@@ -1,6 +1,12 @@
-// Bootstrap
-@import "_bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import "_variables";
 @import "_bootstrap_tweaks";
+
+// Roots
+@import "layouts/_grid";
 
 // Tokenfield
 @import "tokenfield/bootstrap-tokenfield";
@@ -19,3 +25,5 @@
 @import "layouts/_pages";            // Page styling
 @import "layouts/pages/_home";       // Home page styling
 @import "layouts/_posts";            // Post styling
+
+@import "patch";                     // rescue styles for upgrade to bootstrap 4

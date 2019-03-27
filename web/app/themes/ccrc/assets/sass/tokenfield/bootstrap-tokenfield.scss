@@ -4,43 +4,43 @@
  * Copyright 2013-2014 Sliptree and other contributors; Licensed MIT
  */
 
-//@import "../bower_components/bootstrap/less/mixins.less";
-//@import "../bower_components/bootstrap/less/variables.less";
+//@import "../bower_components/bootstrap/less/mixins.scss";
+//@import "../bower_components/bootstrap/less/variables.scss";
 
 // Variables
 
-@token-background: #ededed;
-@token-border: #d9d9d9;
-@token-hover-border: #b9b9b9;
-@token-active-border: rgba(82, 168, 236, 0.8);
-@token-active-border-fallback: rgb(82, 168, 236); // IE8
-@token-active-invalid-border: @token-background;
+$token-background: #ededed;
+$token-border: #d9d9d9;
+$token-hover-border: #b9b9b9;
+$token-active-border: rgba(82, 168, 236, 0.8);
+$token-active-border-fallback: rgb(82, 168, 236); // IE8
+$token-active-invalid-border: $token-background;
 
 
 // Mixins
 
-.tokenfield-focus(@color: @input-border-focus) {
-  @color-rgba: rgba(red(@color), green(@color), blue(@color), .6);
-  border-color: @color;
+@mixin tokenfield-focus($color: $input-border-focus) {
+  $color-rgba: rgba(red($color), green($color), blue($color), .6);
+  border-color: $color;
   outline: 0;
-  .box-shadow(~"inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px @{color-rgba}");
+  .box-shadow("inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #{$color-rgba}");
 }
 
-.tokenfield-validation(@border-color) {
-  border-color: darken(@border-color, 10%);
-  @shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px lighten(@border-color, 20%);
-  .box-shadow(@shadow);
+@mixin tokenfield-validation($border-color) {
+  border-color: darken($border-color, 10%);
+  $shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px lighten($border-color, 20%);
+  @mixin box-shadow($shadow),
 }
 
-.border-radius(@border-radius) {
-  -webkit-border-radius: @border-radius;
-     -moz-border-radius: @border-radius;
-          border-radius: @border-radius;
+@mixin border-radius($border-radius) {
+  -webkit-border-radius: $border-radius;
+     -moz-border-radius: $border-radius;
+          border-radius: $border-radius;
 }
 
 // Blink animation for duplicate tokens
 
-@-webkit-keyframes blink {
+$-webkit-keyframes blink {
   0% {
     border-color: #ededed;
   }
@@ -48,7 +48,7 @@
     border-color: #b94a48;
   }
 }
-@-moz-keyframes blink {
+$-moz-keyframes blink {
   0% {
     border-color: #ededed;
   }
@@ -69,48 +69,48 @@
 
 .tokenfield {
   height: auto;
-  min-height: @input-height-base;
+  min-height: $input-height-base;
   padding-bottom: 0px;
   &.focus {
-    .tokenfield-focus();
+    @include tokenfield-focus();
   }
 
   // Tokens
   .token {
-    .box-sizing(border-box);
-    .border-radius(3px);
+    @include box-sizing(border-box);
+    @include border-radius(3px);
     display: inline-block;
-    border: 1px solid @token-border;
-    background-color: @token-background;
+    border: 1px solid $token-border;
+    background-color: $token-background;
     white-space: nowrap;
     margin: -1px 5px 5px 0;
     height: 22px;
     vertical-align: top;
     cursor: default;
     &:hover {
-      border-color: @token-hover-border;
+      border-color: $token-hover-border;
     }
     &.active {
       border-color: rgb(82, 168, 236);
       border-color: rgba(82, 168, 236, 0.8);
     }
     &.duplicate {
-      border-color: @state-danger-border;
-      .animation-name(blink);
-      .animation-duration(0.1s);
-      .animation-direction(normal);
-      .animation-timing-function(ease);
-      .animation-iteration-count(infinite);
+      border-color: $state-danger-border;
+      @include animation-name(blink);
+      @include animation-duration(0.1s);
+      @include animation-direction(normal);
+      @include animation-timing-function(ease);
+      @include animation-iteration-count(infinite);
     }
     &.invalid {
       background: none;
       border: 1px solid transparent;
-      .border-radius(0);
-      border-bottom: 1px dotted @brand-danger;
+      @include border-radius(0);
+      border-bottom: 1px dotted $brand-danger;
       &.active {
-        background: @token-background;
-        border: 1px solid @token-active-invalid-border;
-        .border-radius(3px);
+        background: $token-background;
+        border: 1px solid $token-active-invalid-border;
+        @include border-radius(3px);
       }
     }
     .token-label {
@@ -143,28 +143,28 @@
     height: 20px;
     padding: 0;
     margin-bottom: 6px;
-    .box-shadow(none);
+    @include box-shadow(none);
   }
   .token-input:focus {
     border-color: transparent;
     outline: 0;
     /* IE6-9 */
-    .box-shadow(none);
+    @include box-shadow(none);
   }
 
   // Disabled state
   &.disabled {
     cursor: not-allowed;
-    background-color: @gray-lighter;
+    background-color: $gray-lighter;
     .token-input {
       cursor: not-allowed;
     }
     .token:hover {
       cursor: not-allowed;
-      border-color: @token-border;
+      border-color: $token-border;
       .close {
         cursor: not-allowed;
-        .opacity(0.2);
+        @include opacity(0.2);
       }
     }
   }
@@ -173,13 +173,13 @@
 // Validation states
 
 .has-warning .tokenfield.focus {
-  .tokenfield-validation(@state-warning-text);
+  @include tokenfield-validation($state-warning-text);
 }
 .has-error .tokenfield.focus {
-  .tokenfield-validation(@state-danger-text);
+  @include tokenfield-validation($state-danger-text);
 }
 .has-success .tokenfield.focus {
-  .tokenfield-validation(@state-success-text);
+  @include tokenfield-validation($state-success-text);
 }
 
 // Various sizes
