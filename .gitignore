@@ -25,10 +25,9 @@ vendor/*
 !vendor/.gitkeep
 
 # Theme
-web/app/themes/imbmembers/dist
-web/app/themes/imbmembers/bower_components
-web/app/themes/imbmembers/node_modules
-web/app/themes/imbmembers/npm-debug.log
+web/app/themes/ccrc/dist
+web/app/themes/ccrc/node_modules
+web/app/themes/ccrc/npm-debug.log
 
 # Database dumps
 *.sql

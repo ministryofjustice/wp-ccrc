@@ -16,7 +16,7 @@ RUN echo "{ \"allow_root\": true }" > /root/.bowerrc
 
 # Set execute bit permissions before running build scripts
 RUN chmod +x bin/* && sleep 1 && \
-    #make clean && \
+    make clean && \
     bin/composer-auth.sh && \
     make build && \
     rm -f auth.json
