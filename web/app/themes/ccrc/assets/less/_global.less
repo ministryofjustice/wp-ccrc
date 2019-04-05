@@ -1,14 +1,12 @@
 // *  { outline: 1px solid grey; }
 
-$line-height-computed: floor(($font-size-base * $line-height-base));
-
 body {
 	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: $main-body-text-size;
+	font-size: @main-body-text-size;
 }
 
 a {
-	color: $body-text-link;
+	color: @body-text-link;
 }
 
 img {
@@ -43,22 +41,22 @@ figure {
 }
 
 .max-col {
-	border-left: 1px solid $thin-divider-clr;
+	border-left: 1px solid @thin-divider-clr;
 }
 
 .main-item {
 	display: inline-block;
-	border-bottom: 1px solid $thin-divider-clr;
+	border-bottom: 1px solid @thin-divider-clr;
 	padding-bottom: 1em;
 
-		@include media-breakpoint-up(sm) {
+		@media (min-width: @screen-sm) {
 			border-top: 0;
 		}
 }
 
 .side-item {
 	display: block;
-	border-bottom: 5px solid $brand-primary;
+	border-bottom: 5px solid @brand-primary;
 	padding-bottom: 1em;
 
 		// &:last-child {
@@ -72,12 +70,12 @@ figure {
 		padding: 0;
 
 		a {
-			color: $body-text-link;
+			color: @body-text-link;
 		}
 	}
 
 .widget {
-	border-bottom: 5px solid $brand-primary;
+	border-bottom: 5px solid @brand-primary;
 	padding-bottom: 1em;
 }
 
@@ -88,22 +86,22 @@ figure {
 }
 
 .em-link {
-	font-size: $larger-link-size;
-	color: $dark-text-clr;
+	font-size: @larger-link-size;
+	color: @dark-text-clr;
 	text-decoration: none;
 	margin-top: .5em;
 	display: inline-block;
 
 
 	&:hover {
-		color: $dark-text-clr;
+		color: @dark-text-clr;
 		text-decoration: underline;
 	}
 }
 
 .post-date {
      font-size: .75em;
-     color: $meta-text-clr;
+     color: @meta-text-clr;
 }
 
 .bg-fade {
@@ -124,7 +122,7 @@ figure {
 
 
 .img-caption {
-	font-size: $caption-text-size;
+	font-size: @caption-text-size;
 	margin: .5em 0;display: inline-block;
 }
 
@@ -158,7 +156,7 @@ figure {
 }
 
 .prev-next {
-	border-top: 1px solid $thin-divider-clr;
+	border-top: 1px solid @thin-divider-clr;
 	padding-top: 1em;
 	margin: .5em 1em;
 	display: inline-block;
@@ -169,10 +167,10 @@ figure {
 	border-bottom: 0;
 }
 .post-meta {
-	border-bottom: 1px solid $thin-divider-clr;
+	border-bottom: 1px solid @thin-divider-clr;
 	margin-bottom: 1em;
 
-		@include media-breakpoint-up(sm) {
+		@media (min-width: @screen-sm) {
 			border-bottom: 0;
 			margin-bottom: 0;
 		}
@@ -181,11 +179,11 @@ figure {
 .download-report {
 	border-top: 0;
 	margin-top: 1em;
-	border-bottom: 1px solid $thin-divider-clr;
+	border-bottom: 1px solid @thin-divider-clr;
 	margin-bottom: 1em;
 	padding-bottom: 1em;
 
-		@include media-breakpoint-up(sm) {
+		@media (min-width: @screen-sm) {
 			border-top: 0;
 			border-bottom: 0;
 			margin-bottom: 0;
@@ -198,7 +196,7 @@ figure {
 	margin-top: .5em;
 
 	.wp-caption-text {
-		font-size: $caption-text-size;
+		font-size: @caption-text-size;
 		padding: .5em 0 1em 0;
 	}
 }
@@ -223,7 +221,7 @@ figure {
 
 .top-margin-sm {
 	margin-top: 1em;
-		@include media-breakpoint-up(sm) {
+		@media (min-width: @screen-sm) {
 		margin-top: 0;
 		}
 

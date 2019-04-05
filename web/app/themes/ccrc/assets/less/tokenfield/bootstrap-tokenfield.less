@@ -4,57 +4,59 @@
  * Copyright 2013-2014 Sliptree and other contributors; Licensed MIT
  */
 
-//@import "../bower_components/bootstrap/less/mixins.scss";
-//@import "../bower_components/bootstrap/less/variables.scss";
+//@import "../bower_components/bootstrap/less/mixins.less";
+//@import "../bower_components/bootstrap/less/variables.less";
 
 // Variables
 
-$token-background: #ededed;
-$token-border: #d9d9d9;
-$token-hover-border: #b9b9b9;
-$token-active-border: rgba(82, 168, 236, 0.8);
-$token-active-border-fallback: rgb(82, 168, 236); // IE8
-$token-active-invalid-border: $token-background;
+@token-background: #ededed;
+@token-border: #d9d9d9;
+@token-hover-border: #b9b9b9;
+@token-active-border: rgba(82, 168, 236, 0.8);
+@token-active-border-fallback: rgb(82, 168, 236); // IE8
+@token-active-invalid-border: @token-background;
 
 
 // Mixins
 
-@mixin tokenfield-focus($color: $input-border-focus) {
-  $color-rgba: rgba(red($color), green($color), blue($color), .6);
-  border-color: $color;
+.tokenfield-focus(@color: @input-border-focus) {
+  @color-rgba: rgba(red(@color), green(@color), blue(@color), .6);
+  border-color: @color;
   outline: 0;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px $color-rgba;
+  .box-shadow(~"inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px @{color-rgba}");
 }
 
-@mixin tokenfield-validation($border-color) {
-  border-color: darken($border-color, 10%);
-  $shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px lighten($border-color, 20%);
-  @include box-shadow($shadow);
+.tokenfield-validation(@border-color) {
+  border-color: darken(@border-color, 10%);
+  @shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px lighten(@border-color, 20%);
+  .box-shadow(@shadow);
 }
 
-@mixin border-radius($border-radius) {
-  -webkit-border-radius: $border-radius;
-  -moz-border-radius: $border-radius;
-  border-radius: $border-radius;
-}
-
-@mixin keyframes( $animation ) {
-  @-webkit-keyframes $animation {
-    @content;
-  }
-  @-moz-keyframes $animation {
-    @content;
-  }
-  @-o-keyframes $animation {
-    @content;
-  }
-  @keyframes $animation {
-    @content;
-  }
+.border-radius(@border-radius) {
+  -webkit-border-radius: @border-radius;
+     -moz-border-radius: @border-radius;
+          border-radius: @border-radius;
 }
 
 // Blink animation for duplicate tokens
-@include keyframes(blink) {
+
+@-webkit-keyframes blink {
+  0% {
+    border-color: #ededed;
+  }
+  100% {
+    border-color: #b94a48;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    border-color: #ededed;
+  }
+  100% {
+    border-color: #b94a48;
+  }
+}
+@keyframes blink {
   0% {
     border-color: #ededed;
   }
@@ -67,56 +69,50 @@ $token-active-invalid-border: $token-background;
 
 .tokenfield {
   height: auto;
+  min-height: @input-height-base;
   padding-bottom: 0px;
-
   &.focus {
-    @include tokenfield-focus();
+    .tokenfield-focus();
   }
 
   // Tokens
   .token {
-    @include box-sizing(border-box);
-    @include border-radius(3px);
+    .box-sizing(border-box);
+    .border-radius(3px);
     display: inline-block;
-    border: 1px solid $token-border;
-    background-color: $token-background;
+    border: 1px solid @token-border;
+    background-color: @token-background;
     white-space: nowrap;
     margin: -1px 5px 5px 0;
     height: 22px;
     vertical-align: top;
     cursor: default;
-
     &:hover {
-      border-color: $token-hover-border;
+      border-color: @token-hover-border;
     }
-
     &.active {
       border-color: rgb(82, 168, 236);
       border-color: rgba(82, 168, 236, 0.8);
     }
-
     &.duplicate {
-      border-color: $state-danger-border;
-      @include animation-name(blink);
-      @include animation-duration(0.1s);
-      @include animation-direction(normal);
-      @include animation-timing-function(ease);
-      @include animation-iteration-count(infinite);
+      border-color: @state-danger-border;
+      .animation-name(blink);
+      .animation-duration(0.1s);
+      .animation-direction(normal);
+      .animation-timing-function(ease);
+      .animation-iteration-count(infinite);
     }
-
     &.invalid {
       background: none;
       border: 1px solid transparent;
-      @include border-radius(0);
-      border-bottom: 1px dotted $brand-danger;
-
+      .border-radius(0);
+      border-bottom: 1px dotted @brand-danger;
       &.active {
-        background: $token-background;
-        border: 1px solid $token-active-invalid-border;
-        @include border-radius(3px);
+        background: @token-background;
+        border: 1px solid @token-active-invalid-border;
+        .border-radius(3px);
       }
     }
-
     .token-label {
       display: inline-block;
       overflow: hidden;
@@ -124,7 +120,6 @@ $token-active-invalid-border: $token-background;
       padding-left: 4px;
       vertical-align: top;
     }
-
     .close {
       font-family: Arial;
       display: inline-block;
@@ -148,32 +143,28 @@ $token-active-invalid-border: $token-background;
     height: 20px;
     padding: 0;
     margin-bottom: 6px;
-    @include box-shadow(none);
+    .box-shadow(none);
   }
-
   .token-input:focus {
     border-color: transparent;
     outline: 0;
     /* IE6-9 */
-    @include box-shadow(none);
+    .box-shadow(none);
   }
 
   // Disabled state
   &.disabled {
     cursor: not-allowed;
-    background-color: $gray-lighter;
-
+    background-color: @gray-lighter;
     .token-input {
       cursor: not-allowed;
     }
-
     .token:hover {
       cursor: not-allowed;
-      border-color: $token-border;
-
+      border-color: @token-border;
       .close {
         cursor: not-allowed;
-        @include opacity(0.2);
+        .opacity(0.2);
       }
     }
   }
@@ -182,15 +173,13 @@ $token-active-invalid-border: $token-background;
 // Validation states
 
 .has-warning .tokenfield.focus {
-  @include tokenfield-validation($state-warning-text);
+  .tokenfield-validation(@state-warning-text);
 }
-
 .has-error .tokenfield.focus {
-  @include tokenfield-validation($state-danger-text);
+  .tokenfield-validation(@state-danger-text);
 }
-
 .has-success .tokenfield.focus {
-  @include tokenfield-validation($state-success-text);
+  .tokenfield-validation(@state-success-text);
 }
 
 // Various sizes
@@ -200,13 +189,11 @@ $token-active-invalid-border: $token-background;
   min-height: 30px;
   padding-bottom: 0px;
 }
-
 .input-group-sm .token,
 .tokenfield.input-sm .token {
   height: 20px;
   margin-bottom: 4px;
 }
-
 .input-group-sm .token-input,
 .tokenfield.input-sm .token-input {
   height: 18px;
@@ -218,22 +205,18 @@ $token-active-invalid-border: $token-background;
   min-height: 45px;
   padding-bottom: 4px;
 }
-
 .input-group-lg .token,
 .tokenfield.input-lg .token {
   height: 25px;
 }
-
 .input-group-lg .token-label,
 .tokenfield.input-lg .token-label {
   line-height: 23px;
 }
-
 .input-group-lg .token .close,
 .tokenfield.input-lg .token .close {
   line-height: 1.3em;
 }
-
 .input-group-lg .token-input,
 .tokenfield.input-lg .token-input {
   height: 23px;
@@ -248,11 +231,9 @@ $token-active-invalid-border: $token-background;
   direction: rtl;
   text-align: right;
 }
-
 .tokenfield.rtl .token {
   margin: -1px 0 5px 5px;
 }
-
 .tokenfield.rtl .token .token-label {
   padding-left: 0px;
   padding-right: 4px;

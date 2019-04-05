@@ -1,8 +1,5 @@
 # PhpStorm
-.idea/
-
-# DB
-*.sql
+.idea
 
 # Application
 web/app/languages
@@ -29,5 +26,9 @@ vendor/*
 !vendor/.gitkeep
 
 # Theme
+web/app/themes/ccrc/dist
 web/app/themes/ccrc/node_modules
-web/app/themes/ccrc/assets/vendor
+web/app/themes/ccrc/npm-debug.log
+
+# Database dumps
+*.sql

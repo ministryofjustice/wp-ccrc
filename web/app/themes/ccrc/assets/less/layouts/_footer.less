@@ -1,10 +1,10 @@
 .content-info { 
-	background: $brand-primary;
+	background: @brand-primary;
 	display: inline-block;
 	min-height: 360px;
 	width: 100%; 
 	margin-top: 1em;
-	color: $light-text-clr;
+	color: @light-text-clr;
 }
 
 .content-info #footer-links {
@@ -23,7 +23,7 @@
 			margin-top: 12px;
 			text-align: center;
 
-				@include media-breakpoint-up(xs) {
+				@media (min-width: @screen-xs) {
 					margin-top: 0;
 					width: 32%;
 					white-space: nowrap;
@@ -31,9 +31,9 @@
 
 					
 				}
-				@include media-breakpoint-up(md) {
+				@media (min-width: @screen-md) {
 					width: auto;
-					border-right: 2px solid $light-text-clr;
+					border-right: 2px solid @light-text-clr;
 					font-size: 1em;
 						&:last-child {
 							border-right: 0;
@@ -43,7 +43,7 @@
 		}
 
 		a {
-			color: $light-text-clr;
+			color: @light-text-clr;
 		}
 	}
 }
@@ -53,15 +53,15 @@
 	width: 100%;
 	display: table;
 	margin: 2em 0 2em 0;
-	border-bottom: 1px solid $light-text-clr;
-	border-top: 1px solid $light-text-clr;
+	border-bottom: 1px solid @light-text-clr;
+	border-top: 1px solid @light-text-clr;
 	padding: 2em 0;
 		li {
 			display: inline-block;
 			width: 24.5%;
 			margin-top: 12px;
 			text-align: center;
-				@include media-breakpoint-up(sm) {
+				@media (min-width: @screen-sm) {
 					width: auto;
 					display: table-cell;
 					float: none;
@@ -70,7 +70,7 @@
 			}
 
 		a {
-			color: $light-text-clr;
+			color: @light-text-clr;
 		}
 }
 
@@ -80,8 +80,8 @@
 }
 
 #footer-contact {
-		@include media-breakpoint-up(sm) {
-			border-left: 1px solid $light-text-clr;
+		@media (min-width: @screen-sm) {
+			border-left: 1px solid @light-text-clr;
 		}
 }
 

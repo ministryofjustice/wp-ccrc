@@ -24,7 +24,6 @@ composer install
 #    fi
 #fi
 
-
 # Build theme assets here
 cd web/app/themes/ccrc
 npm install
@@ -32,3 +31,5 @@ npm run production
 rm -rf node_modules
 cd ../../../..
 
+# Remove composer auth.json
+rm -f auth.json

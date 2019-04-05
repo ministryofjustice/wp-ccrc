@@ -15,7 +15,6 @@
  * ======================================================================== */
 
 import 'bootstrap';
-import 'bootstrap/js/dist/collapse';
 
 (function ($) {
 
@@ -34,7 +33,7 @@ import 'bootstrap/js/dist/collapse';
                 // JavaScript to be fired on the home page
             }
         },
-        // Home page
+        // Case Library
         page_id_12: {
             init: function () {
                 $.get(ajax_url + '?action=get_offences_terms', ccrc_run.offences);

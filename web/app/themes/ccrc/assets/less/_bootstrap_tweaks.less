@@ -7,18 +7,17 @@
  * This file contains a diff of the tweaks that were made.
  */
 
-// dropdowns.scss
+// dropdowns.less
 .dropdown-menu {
   top: 36px;
   background-color: #fff;
 }
 
-// forms.scss
+// forms.less
 .form-inline {
-  @include media-breakpoint-up(sm) {
+  @media (min-width: @screen-sm-min) {
     .input-group {
       width: 100%;
-
       .input-group-addon,
       .input-group-btn,
       .form-control {
@@ -26,27 +25,27 @@
       }
     }
   }
+}
 
-  // navbar.scss
-  .container,
-  .container-fluid {
-    > .navbar-header,
-    > .navbar-collapse {
-      margin-top: -20px;
+// navbar.less
+.container,
+.container-fluid {
+  > .navbar-header,
+  > .navbar-collapse {
+    margin-top: -20px;
 
-      @media (min-width: 480px) {
-        margin-top: -40px;
-      }
+    @media (min-width: 480px) {
+      margin-top: -40px;
     }
   }
+}
 
-  .navbar-nav {
-    @include media-breakpoint-down(lg) {
-      .open .dropdown-menu {
-        > li > a,
-        .dropdown-header {
-          padding: .9em;
-        }
+.navbar-nav {
+  @media (max-width: @grid-float-breakpoint-max) {
+    .open .dropdown-menu {
+      > li > a,
+      .dropdown-header {
+        padding: .9em;
       }
     }
   }

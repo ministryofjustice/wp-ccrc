@@ -4,8 +4,8 @@
  * Copyright 2013-2014 Sliptree and other contributors; Licensed MIT
  */
 
-//@import "../bower_components/bootstrap/less/mixins.scss";
-//@import "../bower_components/bootstrap/less/variables.scss";
+//@import "../bower_components/bootstrap/less/mixins.less";
+//@import "../bower_components/bootstrap/less/variables.less";
 
 /* General Typeahead styling, from http://jsfiddle.net/ragulka/Dy9au/1/ */
 .twitter-typeahead {
@@ -18,21 +18,21 @@
   margin: 0;
   width: 100%;
   vertical-align: middle;
-  background-color: $input-bg;
+  background-color: @input-bg;
 }
 .twitter-typeahead .tt-hint {
-  color: $input-color-placeholder;
+  color: @input-color-placeholder;
   z-index: 1;
   border: 1px solid transparent;
 }
 .twitter-typeahead .tt-input {
-  color: $input-color;
+  color: @input-color;
   z-index: 2;
 }
 .twitter-typeahead .tt-input,
 .twitter-typeahead .tt-hint {
-  height: $input-height-base;
-  padding: $padding-base-vertical $padding-base-horizontal;
+  height: @input-height-base;
+  padding: @padding-base-vertical @padding-base-horizontal;
   font-size: 14px;
   line-height: 1.428571429;
 }
@@ -91,13 +91,13 @@
   min-width: 160px;
   margin-top: 2px;
   padding: 5px 0;
-  background-color: $dropdown-bg;
+  background-color: @dropdown-bg;
   border: 1px solid #ccc;
-  border: 1px solid $dropdown-border;
+  border: 1px solid @dropdown-border;
   *border-right-width: 2px;
   *border-bottom-width: 2px;
   border-radius: 6px;
-  @include box-shadow(0 5px 10px rgba(0, 0, 0, .2));
+  .box-shadow(0 5px 10px rgba(0, 0, 0, .2));
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -107,11 +107,11 @@
   padding: 3px 20px;
 }
 .tt-suggestion.tt-cursor {
-  color: $dropdown-link-hover-color;
-  #gradient > .vertical($dropdown-link-hover-bg, darken($dropdown-link-hover-bg, 5%));
+  color: @dropdown-link-hover-color;
+  #gradient > .vertical(@dropdown-link-hover-bg, darken(@dropdown-link-hover-bg, 5%));
 }
 .tt-suggestion.tt-cursor a {
-  color: $dropdown-bg;
+  color: @dropdown-bg;
 }
 .tt-suggestion p {
   margin: 0;
