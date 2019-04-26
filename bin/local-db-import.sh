@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+# reset
+wp --allow-root db reset --yes
+
 # only run one .sql file
 for i in *.sql; do
     wp --allow-root db import "$i"
