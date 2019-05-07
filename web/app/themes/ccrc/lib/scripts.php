@@ -34,7 +34,7 @@ function roots_scripts()
         'css' => '/dist' . $assets['/css/main.min.css'],
         'js' => '/dist' . $assets['/js/main.min.js'],
         //'modernizr' => '/assets/vendor/modernizr/modernizr.js',
-        'jquery' => '//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'
+        'jquery' => '//ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js'
     );
     //}
 
@@ -47,7 +47,7 @@ function roots_scripts()
      */
     if (!is_admin() && current_theme_supports('jquery-cdn')) {
         wp_deregister_script('jquery');
-        wp_register_script('jquery', $assets['jquery'], array(), '3.4.1', false);
+        wp_register_script('jquery', $assets['jquery'], array(), '3.4.0', false);
         add_filter('script_loader_src', 'roots_jquery_local_fallback', 10, 2);
 
         // load jq migrate
