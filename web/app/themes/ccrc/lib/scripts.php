@@ -50,6 +50,7 @@ function roots_scripts()
         wp_register_script('jquery', $assets['jquery'], array(), '3.4.1', false);
         add_filter('script_loader_src', 'roots_jquery_local_fallback', 10, 2);
 
+        // load jq migrate
         wp_deregister_script( 'jquery-migrate' );
         wp_register_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.min.js', array( 'jquery' ), '3.0.1', false );
         wp_enqueue_script( 'jquery-migrate' );
