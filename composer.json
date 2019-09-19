@@ -59,7 +59,7 @@
         "ministryofjustice/wp-rewrite-media-to-s3": "^0.1.1",
         "wpackagist-plugin/option-tree": "*",
         "wpackagist-plugin/fast-user-switching": "*",
-        "ministryofjustice/wp-moj-components": "^1.1"
+        "ministryofjustice/wp-moj-components": "*"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.5.1"
