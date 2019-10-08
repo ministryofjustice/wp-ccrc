@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "69273b010174c2686e9ff841061c9789",
+    "content-hash": "6a99bf8a0abee0635cf289a7b247eab9",
     "packages": [
         {
             "name": "composer/installers",
@@ -246,9 +246,7 @@
             "version": "5.2.3",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/core/5.2.3/en_GB.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/translation/core/5.2.3/en_GB.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -306,18 +304,60 @@
             "time": "2018-02-04T10:52:01+00:00"
         },
         {
-            "name": "ministryofjustice/wp-moj-components",
-            "version": "1.1.4",
+            "name": "ministryofjustice/cookie-compliance-for-wordpress",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ministryofjustice/wp-moj-components.git",
-                "reference": "692181b888e10c669bcf4a4d8af245abbaf2300c"
+                "url": "https://github.com/ministryofjustice/cookie-compliance-for-wordpress.git",
+                "reference": "1c99f2d6e9d4db890fb5d2f0951dc7db82ecc9e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.wp.dsd.io/dist/ministryofjustice/wp-moj-components/ministryofjustice-wp-moj-components-692181b888e10c669bcf4a4d8af245abbaf2300c-zip-70296e.zip",
-                "reference": "692181b888e10c669bcf4a4d8af245abbaf2300c",
-                "shasum": "14740bd0390fe2434f2aff92e54fd1bb7d54fcaa"
+                "url": "https://composer.wp.dsd.io/dist/ministryofjustice/cookie-compliance-for-wordpress/ministryofjustice-cookie-compliance-for-wordpress-1c99f2d6e9d4db890fb5d2f0951dc7db82ecc9e6-zip-2de3e6.zip",
+                "reference": "1c99f2d6e9d4db890fb5d2f0951dc7db82ecc9e6",
+                "shasum": "a78076c1695121e4ef0b82222d2a1098bea7f6b4"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "CCFW\\": "./includes"
+                },
+                "classmap": [
+                    "includes/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Minstry of Justice",
+                    "email": "wordpress@digital.justice.gov.uk"
+                }
+            ],
+            "description": "WP plugin that presents visitor with a cookie consent banner and opt-out setting page.",
+            "support": {
+                "source": "https://github.com/ministryofjustice/cookie-compliance-for-wordpress/tree/1.0.0",
+                "issues": "https://github.com/ministryofjustice/cookie-compliance-for-wordpress/issues"
+            },
+            "time": "2019-10-06T11:35:04+00:00"
+        },
+        {
+            "name": "ministryofjustice/wp-moj-components",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ministryofjustice/wp-moj-components.git",
+                "reference": "03588073d9e5cc1b2593c4cdced71595fbb6cce5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.wp.dsd.io/dist/ministryofjustice/wp-moj-components/ministryofjustice-wp-moj-components-03588073d9e5cc1b2593c4cdced71595fbb6cce5-zip-11175a.zip",
+                "reference": "03588073d9e5cc1b2593c4cdced71595fbb6cce5",
+                "shasum": "d9ef650c0fb485c0cd3182bd715624de142732a7"
             },
             "require": {
                 "composer/installers": "^1.0"
@@ -331,10 +371,10 @@
             ],
             "description": "A plugin to introduce global functions to a collection of WP sites",
             "support": {
-                "source": "https://github.com/ministryofjustice/wp-moj-components/tree/1.1.4",
+                "source": "https://github.com/ministryofjustice/wp-moj-components/tree/2.0.0",
                 "issues": "https://github.com/ministryofjustice/wp-moj-components/issues"
             },
-            "time": "2019-09-16T15:41:19+00:00"
+            "time": "2019-09-25T12:44:25+00:00"
         },
         {
             "name": "ministryofjustice/wp-rewrite-media-to-s3",
@@ -586,9 +626,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/classic-editor.1.5.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/classic-editor.1.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -606,9 +644,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/fast-user-switching.zip?timestamp=1551360022",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/fast-user-switching.zip?timestamp=1551360022"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -626,9 +662,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.5.3.9.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.5.3.9.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -646,9 +680,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/option-tree.2.7.3.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/option-tree.2.7.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
