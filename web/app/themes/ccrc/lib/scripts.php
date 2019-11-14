@@ -20,25 +20,18 @@ function roots_scripts()
      * The build task in Grunt renames production assets with a hash
      * Read the asset names from assets-manifest.json
      */
-    /*if (WP_ENV === 'development') {
-      $assets = array(
-        'css'       => '/assets/css/main.css',
-        'js'        => '/assets/js/scripts.js',
-        'modernizr' => '/assets/vendor/modernizr/modernizr.js',
-        'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js'
-      );
-    } else {*/
     $get_assets = file_get_contents(get_template_directory() . '/dist/mix-manifest.json');
     $assets = json_decode($get_assets, true);
     $assets = array(
         'css' => '/dist' . $assets['/css/main.min.css'],
         'js' => '/dist' . $assets['/js/main.min.js'],
         //'modernizr' => '/assets/vendor/modernizr/modernizr.js',
-        'jquery' => '//ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js'
+        'jquery' => '//ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js',
+        'g-fonts' => 'https://fonts.googleapis.com/css?family=Roboto:400,500,700'
     );
-    //}
 
     wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
+    wp_enqueue_style('roots_css', $assets['g-fonts'], false, null);
 
     /**
      * jQuery is loaded using the same method from HTML5 Boilerplate:
@@ -52,8 +45,7 @@ function roots_scripts()
 
         // load jq migrate
         wp_deregister_script( 'jquery-migrate' );
-        wp_register_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.min.js', array( 'jquery' ), '3.0.1', false );
-        wp_enqueue_script( 'jquery-migrate' );
+        wp_enqueue_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.min.js', array( 'jquery' ), '3.0.1', false  );
     }
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
