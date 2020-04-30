@@ -30,7 +30,7 @@
     "dependencies": {
         "bootstrap": "^3.4.1",
         "bootstrap-dropdown-replacement": "^1.0.7",
-        "jquery": "^3.4.0"
+        "jquery": "^3.5.0"
     },
     "devDependencies": {
         "details-element-polyfill": "^2.4.0",
