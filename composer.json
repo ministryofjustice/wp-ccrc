@@ -59,7 +59,6 @@
         "wpackagist-plugin/classic-editor": "*",
         "ministryofjustice/wp-rewrite-media-to-s3": "^0.1.1",
         "wpackagist-plugin/option-tree": "*",
-        "wpackagist-plugin/fast-user-switching": "*",
         "ministryofjustice/cookie-compliance-for-wordpress": "*",
         "ministryofjustice/wp-user-roles": "*",
         "ministryofjustice/wp-moj-components": "*"
