@@ -1,5 +1,4 @@
 <?php get_template_part('head'); ?>
-<body <?php body_class(); ?>>
 
   <!--[if lt IE 8]>
     <div class="alert alert-warning">
@@ -10,6 +9,8 @@
     <!--[if lt IE 9]>
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/ie7and8.css">
   <![endif]-->
+
+  <div class="ccfw-background-grey-overlay"></div>
 
   <?php
     do_action('get_header');

@@ -1,4 +1,8 @@
 <?php get_template_part( 'head' ); ?>
+
+<body <?php body_class(); ?>>
+<?php do_action('after_body_open_tag'); ?>
+
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
   <div class="container">
 
