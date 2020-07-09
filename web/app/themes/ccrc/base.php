@@ -10,8 +10,6 @@
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/ie7and8.css">
   <![endif]-->
 
-  <div class="ccfw-background-grey-overlay"></div>
-
   <?php
     do_action('get_header');
     get_header();
