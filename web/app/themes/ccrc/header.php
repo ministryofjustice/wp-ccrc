@@ -35,3 +35,4 @@
     </nav>
   </div>
 </header>
+<?php get_template_part('templates/feedback-banner'); ?>
