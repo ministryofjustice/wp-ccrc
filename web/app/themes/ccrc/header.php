@@ -1,6 +1,13 @@
 <body <?php body_class(); ?>>
 <div class="ccfw-background-grey-overlay"></div>
-<?php wp_body_open(); ?>
+
+<?php if ( ! function_exists( 'wp_body_open' ) ) {
+	function wp_body_open() {
+		do_action( 'wp_body_open' );
+    }
+}
+wp_body_open();
+?>
 
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
   <div class="container">
