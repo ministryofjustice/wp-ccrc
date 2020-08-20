@@ -1,6 +1,7 @@
 <body <?php body_class(); ?>>
 <div class="ccfw-background-grey-overlay"></div>
-<?php do_action('after_body_open_tag'); ?>
+<?php wp_body_open(); ?>
+
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
   <div class="container">
 
