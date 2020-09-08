@@ -1,12 +1,13 @@
 <body <?php body_class(); ?>>
 <?php
-if ( ! function_exists( 'wp_body_open' ) ) {
-	/**
-	 * Open the body tag, pull in any hooked triggers.
-	 **/
-	function wp_body_open() {
-		do_action( 'wp_body_open' );
-	}
+if (! function_exists('wp_body_open')) {
+    /**
+     * Open the body tag, pull in any hooked triggers.
+     **/
+    function wp_body_open()
+    {
+        do_action('wp_body_open');
+    }
 }
 wp_body_open();
 ?>
@@ -24,7 +25,7 @@ wp_body_open();
 </div>
 
 <div id="search">
-<?php get_search_form( ); ?>
+<?php get_search_form(); ?>
 </div>
 
     <div class="navbar-header">
@@ -39,10 +40,11 @@ wp_body_open();
     <nav class="collapse navbar-collapse" role="navigation">
       <?php
         if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
+            wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
         endif;
-      ?>
+        ?>
     </nav>
   </div>
 </header>
-<?php get_template_part('templates/feedback-banner'); ?>
+<?php
+get_template_part('templates/feedback-banner');
