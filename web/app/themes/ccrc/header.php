@@ -1,6 +1,16 @@
 <body <?php body_class(); ?>>
+<?php
+if ( ! function_exists( 'wp_body_open' ) ) {
+	/**
+	 * Open the body tag, pull in any hooked triggers.
+	 **/
+	function wp_body_open() {
+		do_action( 'wp_body_open' );
+	}
+}
+wp_body_open();
+?>
 <div class="ccfw-background-grey-overlay"></div>
-<?php do_action('after_body_open_tag'); ?>
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
   <div class="container">
 
