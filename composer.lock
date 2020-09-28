@@ -311,41 +311,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ministryofjustice/cookie-compliance-for-wordpress.git",
-                "reference": "cb04cfb9e912d780f176747dbd6796fb0741f738"
+                "reference": "8a4a4bddb57ab0f538c24a8460612fd1a2cfeecd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ministryofjustice/cookie-compliance-for-wordpress/zipball/cb04cfb9e912d780f176747dbd6796fb0741f738",
-                "reference": "cb04cfb9e912d780f176747dbd6796fb0741f738",
+                "url": "https://api.github.com/repos/ministryofjustice/cookie-compliance-for-wordpress/zipball/8a4a4bddb57ab0f538c24a8460612fd1a2cfeecd",
+                "reference": "8a4a4bddb57ab0f538c24a8460612fd1a2cfeecd",
                 "shasum": ""
             },
-            "require": {
-                "composer/installers": "^1.0"
-            },
             "type": "wordpress-plugin",
-            "autoload": {
-                "psr-4": {
-                    "CCFW\\": "./includes"
-                },
-                "classmap": [
-                    "includes/"
-                ]
-            },
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Minstry of Justice",
-                    "email": "wordpress@digital.justice.gov.uk"
-                }
-            ],
-            "description": "WP plugin that presents visitor with a cookie consent banner and opt-out setting page.",
+            "description": "WP plugin that presents visitor with a cookie consent banner and opt-in setting page.",
             "support": {
-                "source": "https://github.com/ministryofjustice/cookie-compliance-for-wordpress/tree/1.3.2",
+                "source": "https://github.com/ministryofjustice/cookie-compliance-for-wordpress/tree/master",
                 "issues": "https://github.com/ministryofjustice/cookie-compliance-for-wordpress/issues"
             },
-            "time": "2019-12-23T20:06:00+00:00"
+            "time": "2020-09-23T15:27:37+00:00"
         },
         {
             "name": "ministryofjustice/wp-moj-components",
@@ -749,15 +732,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-analytify",
-            "version": "3.1.3",
+            "version": "3.1.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-analytify/",
-                "reference": "tags/3.1.3"
+                "reference": "tags/3.1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-analytify.3.1.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-analytify.3.1.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
