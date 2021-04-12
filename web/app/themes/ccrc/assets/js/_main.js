@@ -36,7 +36,7 @@ import 'bootstrap';
         // Case Library
         page_id_12: {
             init: function () {
-                $.get(ajax_url + '?action=get_offences_terms', ccrc_run.offences);
+                $.get(script_vars.ajax_url + '?action=get_offences_terms', ccrc_run.offences);
             }
         },
         // About us page, note the change from about-us to about_us.
